@@ -5,6 +5,7 @@ using namespace std;
 
 int main(void) {
 
+    //matrix
     int row1, column1, *matrix1;
     int row2, column2, *matrix2;
     int *matrix3;
