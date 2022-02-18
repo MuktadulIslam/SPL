@@ -1,27 +1,69 @@
 # depslib dependency file v1.0
-1645086025 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\main.cpp
+1645211724 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\main.cpp
 	<bits/stdc++.h>
 	"header.h"
 
-1645082587 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\header.h
+1645211761 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\header.h
 	<bits/stdc++.h>
 
-1645079829 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\in&out_matrix.cpp
+1645211677 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\in&out_matrix.cpp
 	<bits/stdc++.h>
 
 1645079403 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\determinant.cpp
 	<bits/stdc++.h>
 	"header.h"
 
-1645051652 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\addition&subtraction.cpp
+1645185868 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\addition&subtraction.cpp
 	<bits/stdc++.h>
 	"header.h"
 
-1645080984 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\matrixmultiplication.cpp
+1645185057 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\matrixmultiplication.cpp
 	<bits/stdc++.h>
 	"header.h"
 
-1645086236 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\multiplicationwithconstant.cpp
+1645186031 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645211832 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645185868 source:c:\users\user\onedrive\documents\github\spl\addition&subtraction.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645215985 c:\users\user\onedrive\documents\github\spl\header.h
+	<bits/stdc++.h>
+
+1645079403 source:c:\users\user\onedrive\documents\github\spl\determinant.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645211677 source:c:\users\user\onedrive\documents\github\spl\in&out_matrix.cpp
+	<bits/stdc++.h>
+
+1645185057 source:c:\users\user\onedrive\documents\github\spl\matrixmultiplication.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645211968 source:c:\users\user\onedrive\documents\github\spl\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645186031 source:c:\users\user\onedrive\documents\github\spl\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645216551 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645214139 source:c:\users\user\onedrive\documents\github\spl\matrixadjoint.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1645217424 source:c:\users\user\onedrive\documents\github\spl\matrixinverse.cpp
 	<bits/stdc++.h>
 	"header.h"
 

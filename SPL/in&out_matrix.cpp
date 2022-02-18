@@ -19,7 +19,7 @@ int * input_matrix_from_file(char *fileName, int *row, int *column){
 
         for(i=0 ; i < *row ; i++)
             for(j=0 ; j < *column ; j++)
-                file >> *(matrix + i*(*row) + j);
+                file >> *(matrix + i*(*column) + j);
 
         file.close();
         return matrix;
@@ -37,13 +37,13 @@ int * input_matrix_from_console(int *row, int *column){
     cout << "Now enter the  " << *row << 'X' << *column << "  Matrix:" << endl;
     for(i=0 ; i < *row ; i++)
         for(j=0 ; j < *column ; j++)
-            cin >> *(matrix + i*(*row) + j);
+            cin >> *(matrix + i*(*column) + j);
 
     return matrix;
 }
 
 
-void printMatrix(int *matrix, int row, int column) {
+void print_matrix(int *matrix, int row, int column) {
     if(matrix == NULL) {
         cout << "The matrix is empty!!!!!" << endl;
         return;
@@ -53,7 +53,7 @@ void printMatrix(int *matrix, int row, int column) {
         int i, j;
         for(i=0 ; i<row ; i++){
             for(j=0 ; j<column ; j++) {
-                cout << *(matrix + i*row + j) << "  ";
+                cout << *(matrix + i*column + j) << "  ";
             }
             cout << endl;
         }

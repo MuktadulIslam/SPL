@@ -38,6 +38,7 @@
 		<Unit filename="in&amp;out_matrix.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrixMultiplication.cpp" />
+		<Unit filename="matrixTranspose.cpp" />
 		<Unit filename="multiplicationWithConstant.cpp" />
 		<Unit filename="text.txt" />
 		<Unit filename="text2.txt" />

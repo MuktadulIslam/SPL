@@ -28,7 +28,7 @@ int * matrix_addition(int *matrix1, int row1, int column1, int *matrix2, int row
 
         for(i=0 ; i<row1 ; i++) {
             for(j=0 ; j<column1 ; j++) {
-                *matrix = *(matrix1 + i*row1 + j) + *(matrix2 + i*row2 + j);
+                *matrix = *(matrix1 + i*column1 + j) + *(matrix2 + i*column2 + j);
                 matrix++;
             }
         }
@@ -62,7 +62,7 @@ int * matrix_subtraction(int *matrix1, int row1, int column1, int *matrix2, int 
 
         for(i=0 ; i<row1 ; i++) {
             for(j=0 ; j<column1 ; j++) {
-                *matrix = *(matrix1 + i*row1 + j) - *(matrix2 + i*row2 + j);
+                *matrix = *(matrix1 + i*column1 + j) - *(matrix2 + i*column2 + j);
                 matrix++;
             }
         }

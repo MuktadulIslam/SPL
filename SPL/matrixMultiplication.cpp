@@ -21,6 +21,7 @@ int * matrix_multiplication(int *matrix1, int row1, int column1, int *matrix2, i
         int i, j, k, *matrix, *temp, temp1;
         matrix = (int*) malloc(row1 * column2 * sizeof(int));
         temp = matrix;
+             cout << endl << sizeof(matrix)/sizeof(int) << endl;
 
         for(i=0 ; i<row1 ; i++) {
             for(j=0 ; j<column2 ; j++) {

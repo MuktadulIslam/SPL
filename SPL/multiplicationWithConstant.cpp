@@ -9,13 +9,17 @@ int * matrix_multiplication_with_constant(int constant, int *matrix, int row, in
         return NULL;
     }
 
-    int i, j, *matrix1;
-    matrix1 = (int*) malloc(row * column * sizeof(int));
+    else {
+        int i, j, *mat, *temp;
+        mat = (int*) malloc(row * column * sizeof(int));
+        temp = mat;
 
-    for(i=0 ; i<row ; i++){
-        for(j=0 ; j<column ; j++) {
-            *(matrix1 + i*row + j) = (*(matrix + i*row + j)) * constant;
+        for(i=0 ; i<row ; i++) {
+            for(j=0 ; j<column ; j++) {
+                *mat = *(matrix + i*column + j) * constant;
+                mat++;
+            }
         }
+        return temp;
     }
-    return matrix1;
 }
