@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include "n-header.h"
+#include "matrix.h"
 using namespace std;
 
 void subMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeColumn) {

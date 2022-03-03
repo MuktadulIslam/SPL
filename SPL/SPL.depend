@@ -55,10 +55,10 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646261925 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1646344431 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
-	"n-header.h"
-	"f-header.h"
+	"matrix.h"
+	"fmatrix.h"
 
 1645214139 source:c:\users\user\onedrive\documents\github\spl\matrixadjoint.cpp
 	<bits/stdc++.h>
@@ -71,53 +71,79 @@
 1645211677 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_matrix.cpp
 	<bits/stdc++.h>
 
-1646245260 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\addition&subtraction.cpp
+1646338483 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\addition&subtraction.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
 1645215985 c:\users\user\onedrive\documents\github\spl\\n-header.h
 	<bits/stdc++.h>
 
-1646245254 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
+1646338475 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646245245 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixadjoint.cpp
+1646338463 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixadjoint.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646245238 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
+1646338454 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646245227 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixmultiplication.cpp
+1646338446 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixmultiplication.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646245214 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixtranspose.cpp
+1646338437 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixtranspose.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646245207 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\multiplicationwithconstant.cpp
+1646338429 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\multiplicationwithconstant.cpp
 	<bits/stdc++.h>
-	"n-header.h"
+	"matrix.h"
 
-1646256735 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\faddition&subtraction.cpp
+1646338639 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\faddition&subtraction.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
 
 1646249149 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
 
 1645215985 c:\users\user\onedrive\documents\github\spl\n-header.h
 	<bits/stdc++.h>
 
-1646260349 c:\users\user\onedrive\documents\github\spl\f-header.h
+1646262570 c:\users\user\onedrive\documents\github\spl\f-header.h
 	<bits/stdc++.h>
 
-1646262471 source:c:\users\user\onedrive\documents\github\spl\linear system solver\eqninput.cpp
+1646263210 source:c:\users\user\onedrive\documents\github\spl\linear system solver\eqninput.cpp
 	<bits/stdc++.h>
 
-1646259151 source:c:\users\user\onedrive\documents\github\spl\test.cpp
+1646340989 source:c:\users\user\onedrive\documents\github\spl\test.cpp
 	<bits/stdc++.h>
 
-1646261579 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
+1646345919 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
 	<bits/stdc++.h>
+	"fmatrix.h"
+
+1646345750 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
+	<bits/stdc++.h>
+
+1646346275 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
+	<bits/stdc++.h>
+
+1645215985 c:\users\user\onedrive\documents\github\spl\matrix.h
+	<bits/stdc++.h>
+
+1646338942 c:\users\user\onedrive\documents\github\spl\fmatrix.h
+	<bits/stdc++.h>
+
+1645215985 c:\users\user\onedrive\documents\github\spl\\matrix.h
+	<bits/stdc++.h>
+
+1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+
+1646346244 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
 

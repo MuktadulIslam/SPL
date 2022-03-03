@@ -35,13 +35,15 @@
 			<Add directory="normalMatrix" />
 		</Compiler>
 		<Unit filename="equation.txt" />
-		<Unit filename="f-header.h" />
+		<Unit filename="fmatrix.h" />
 		<Unit filename="fractionMatrix/faddition&amp;subtraction.cpp" />
+		<Unit filename="fractionMatrix/getNumber.cpp" />
 		<Unit filename="fractionMatrix/in&amp;out_fmatrix.cpp" />
-		<Unit filename="linear system solver/eqnInput.cpp" />
+		<Unit filename="fractionMatrix/lcm.cpp" />
+		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="n-header.h" />
+		<Unit filename="matrix.h" />
 		<Unit filename="normalMatrix/addition&amp;subtraction.cpp" />
 		<Unit filename="normalMatrix/determinant.cpp" />
 		<Unit filename="normalMatrix/in&amp;out_matrix.cpp" />
@@ -50,7 +52,6 @@
 		<Unit filename="normalMatrix/matrixMultiplication.cpp" />
 		<Unit filename="normalMatrix/matrixTranspose.cpp" />
 		<Unit filename="normalMatrix/multiplicationWithConstant.cpp" />
-		<Unit filename="test.cpp" />
 		<Unit filename="text.txt" />
 		<Unit filename="text2.txt" />
 		<Extensions />
