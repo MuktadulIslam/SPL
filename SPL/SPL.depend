@@ -55,10 +55,11 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646433152 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1646433902 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
+	"linearSystem.h"
 
 1645214139 source:c:\users\user\onedrive\documents\github\spl\matrixadjoint.cpp
 	<bits/stdc++.h>
@@ -106,10 +107,11 @@
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646432691 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+1646434176 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
+	"linearSystem.h"
 
 1645215985 c:\users\user\onedrive\documents\github\spl\n-header.h
 	<bits/stdc++.h>
@@ -127,19 +129,19 @@
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646432877 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
+1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
 	<bits/stdc++.h>
 
 1646417544 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
-1646419323 c:\users\user\onedrive\documents\github\spl\matrix.h
+1646433781 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
 1646417544 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
-1646419323 c:\users\user\onedrive\documents\github\spl\\matrix.h
+1646433781 c:\users\user\onedrive\documents\github\spl\\matrix.h
 	<bits/stdc++.h>
 
 1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
@@ -149,4 +151,10 @@
 1646418236 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
+
+1646433809 c:\users\user\onedrive\documents\github\spl\\linearsystem.h
+	<bits/stdc++.h>
+
+1646433809 c:\users\user\onedrive\documents\github\spl\linearsystem.h
+	<bits/stdc++.h>
 

@@ -21,7 +21,6 @@ int * matrix_adjoint(int *matrix, int row, int column);
 void matrix_inverse_withPrint_byAdj(int *matrix, int row, int column);
 
 
-void solution_by_cramersRules(char *equationFileName, char *solutionFileName);
 
 
 

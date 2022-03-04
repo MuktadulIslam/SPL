@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #include "matrix.h"
 #include "fmatrix.h"
+#include "linearSystem.h"
 
 using namespace std;
 
@@ -49,15 +50,15 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 			x + 4y - 5z = 0
 			5x -  y +z = 5
     */
-    write << "\t\t*******Solution of linear system using Cramer's law*******" << endl << endl;
-    read >> row;
-    int del_x[row], del;
-    read.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
-    write << "Given, the systems of linear equations:" << endl;
-    for(i=0 ; i<row ; i++) {
-        getline(read, str);
-        write << "\t\t\t" << str << endl;
-    }
+        write << "\t\t*******Solution of linear system using Cramer's law*******" << endl << endl;
+        read >> row;
+        int del_x[row], del;
+        read.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
+        write << "Given, the systems of linear equations:" << endl;
+        for(i=0 ; i<row ; i++) {
+            getline(read, str);
+            write << "\t\t\t" << str << endl;
+        }
 
 
     /* For
@@ -101,12 +102,12 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
 
 
-        /* For
-        Now,
-                  | 2  -3   4  |
-            DEL = | 1   4  -5  | = -8
-                  | 5  -1   1  |
-        */
+    /* For
+    Now,
+              | 2  -3   4  |
+        DEL = | 1   4  -5  | = -8
+              | 5  -1   1  |
+    */
         write << "Now," << endl;
         for(i=0 ; i<row ; i++){
             if(i == row/2)
@@ -129,11 +130,11 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
 
 
-        /* For
-                | 2  -3   4  |
-        DEL.x = | 1   4  -5  | = -3
-                | 5  -1   1  |
-        */
+    /* For
+            | 2  -3   4  |
+    DEL.x = | 1   4  -5  | = -3
+            | 5  -1   1  |
+    */
         for(k=0 ; k<row ; k++) {
             mat = new_matrix(matrix, row, column, dMat, k);
             for(i=0 ; i<row ; i++){
@@ -158,13 +159,13 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
 
 
-        /* For
-        So now we can get the value using this method...x = (DEL.x)/DEL
+    /* For
+    So now we can get the value using this method...x = (DEL.x)/DEL
 
-		  x = (DEL.x)/DEL
-		    = 69/-7
-		    = -69/7
-        */
+      x = (DEL.x)/DEL
+        = 69/-7
+        = -69/7
+    */
 
         write << endl << "So now we can get the value using this method...x = (DEL.x)/DEL" << endl << endl;
 
@@ -188,6 +189,8 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                     write << "\t\t    = " << -temp/del << '/' << -temp/del_x[k] << endl << endl;
             }
         }
+    write.close();
+    read.close();
 }
 
 
