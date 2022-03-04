@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void input_equation_from_console(int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
+void input_fequation_from_console(int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
 
     char *p, str[200], *variables, sign = '+', temp1[10], temp2[10];
     int i, j, k, l, *matrix, *dMat;
@@ -115,7 +115,7 @@ void input_equation_from_console(int *row, int *column, int **coefficientMat, in
 
 
 
-void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
+void input_fequation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
 
     char *p, str[200], *variables, sign = '+', temp1[10], temp2[10];
     int i, j, k, l, *matrix, *dMat;
@@ -218,6 +218,82 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
                 gotDivident = false;
                 gotDivisor = false;
                 noOfVariable++;
+            }
+        }
+    }
+}
+
+
+void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
+    char *p, str[200], *variables, sign = '+', temp1[10], temp2[10];
+    int i, j, k, l, *matrix, *dMat;
+    bool gotVariable, gotCoefficient, gotEqualSign, flag;
+
+    freopen(fileName, "r" , stdin);
+    cin >> *row;
+    *column = *row;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
+
+
+
+    // Initializing memory for 3 types of matrix
+    matrix = (int*) malloc((*row) * (*row) * sizeof(int));
+    dMat = (int*) malloc((*row) * sizeof(int));
+    variables = (char*) malloc(*row);
+
+    *coefficientMat = matrix;
+    *Dmatrix = dMat;
+    *variablesMat = variables;
+
+
+
+    for(i=0 ; i < *row ; i++) {
+        gotVariable = false;
+        gotCoefficient = false;
+        gotEqualSign = false;
+        sign = '+';
+
+        cin.getline(str,200);
+
+        for(p=str ; *p ; p++) {
+            if(*p == ' ') continue;
+            else if(*p == '=') {
+                gotEqualSign = true;
+                sign = '+';
+            }
+            else if(*p == '+' || *p == '-') {
+                sign = *p;
+                gotCoefficient = false;
+            }
+
+            else if(*p >= '0' && *p <= '9') {
+
+                if(gotEqualSign) {
+                    p = getNumber(p, sign, dMat);
+                    dMat++;
+
+                    break;      // No need to continue the loop, because the equation is over
+                }
+                else if(!gotCoefficient  && !gotVariable) {
+                    p = getNumber(p, sign, matrix);
+                    matrix++;
+                    gotCoefficient = true;
+                }
+            }
+
+            else if(*p >= 'a' && *p <= 'z'   ||   *p >= 'A' && *p <= 'Z') {
+
+                if(!gotCoefficient) {      // x + 2y = 1,,,,,,coefficient of 'x' will be 1
+                    if(sign == '+')
+                        *matrix++ = 1;
+                    else
+                       *matrix++ = -1;
+                }
+
+                if(i == 0) {    // i=0,,,,,,because no need to get the variables again
+                   *variables++ = *p;
+                }
+                gotCoefficient = false;
             }
         }
     }

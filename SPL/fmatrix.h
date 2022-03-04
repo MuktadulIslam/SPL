@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void input_equation_from_console(int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
-void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
+void input_fequation_from_console(int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
+void input_fequation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
 
 int * input_fmatrix_from_file(char *fileName, int *row, int *column);
 int * input_fmatrix_from_console(int *row, int *column);

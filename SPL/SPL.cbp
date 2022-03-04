@@ -52,6 +52,7 @@
 		<Unit filename="normalMatrix/matrixMultiplication.cpp" />
 		<Unit filename="normalMatrix/matrixTranspose.cpp" />
 		<Unit filename="normalMatrix/multiplicationWithConstant.cpp" />
+		<Unit filename="solution.txt" />
 		<Unit filename="text.txt" />
 		<Unit filename="text2.txt" />
 		<Extensions />

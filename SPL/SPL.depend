@@ -55,7 +55,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646344431 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1646433152 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
@@ -68,7 +68,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1645211677 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_matrix.cpp
+1646423592 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_matrix.cpp
 	<bits/stdc++.h>
 
 1646338483 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\addition&subtraction.cpp
@@ -106,7 +106,10 @@
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646249149 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+1646432691 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"fmatrix.h"
 
 1645215985 c:\users\user\onedrive\documents\github\spl\n-header.h
 	<bits/stdc++.h>
@@ -124,26 +127,26 @@
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646345750 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
+1646432877 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
 	<bits/stdc++.h>
 
-1646346275 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
+1646417544 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
-1645215985 c:\users\user\onedrive\documents\github\spl\matrix.h
+1646419323 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
-1646338942 c:\users\user\onedrive\documents\github\spl\fmatrix.h
+1646417544 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
-1645215985 c:\users\user\onedrive\documents\github\spl\\matrix.h
+1646419323 c:\users\user\onedrive\documents\github\spl\\matrix.h
 	<bits/stdc++.h>
 
 1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646346244 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
+1646418236 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 

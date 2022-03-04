@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
+
 int * input_matrix_from_file(char *fileName, int *row, int *column);
 int * input_matrix_from_console(int *row, int *column);
 void print_matrix(int *matrix, int row, int column);
@@ -17,5 +19,9 @@ int * matrix_transpose(int *matrix, int row, int column);
 
 int * matrix_adjoint(int *matrix, int row, int column);
 void matrix_inverse_withPrint_byAdj(int *matrix, int row, int column);
+
+
+void solution_by_cramersRules(char *equationFileName, char *solutionFileName);
+
 
 

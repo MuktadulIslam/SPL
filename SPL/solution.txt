@@ -1,0 +1,47 @@
+		*******Solution of linear system using Cramer's law*******
+
+Given, the systems of linear equations:
+			5x + y + 3z = 1
+			8x - 5y + 2z = 0
+			-4x + 2y -  z = 4
+
+Which in matrix format is: 
+ _           _    _ _        _ _
+|  5   1   3  |  | x |      | 1 |
+|  8  -5   2  |  | y |  =   | 0 |
+| -4   2  -1  |  | z |      | 4 |
+|_           _|  |_ _|      |_ _|
+
+
+Now,
+			| 5   1   3  |
+      DEL = | 8  -5   2  | = -7
+			|-4   2  -1  |
+
+			| 1   1   3  |
+	DEL.x = | 0  -5   2  | = 69
+			| 4   2  -1  |
+
+			| 5   1   3  |
+	DEL.y = | 8   0   2  | = 56
+			|-4   4  -1  |
+
+			| 5   1   1  |
+	DEL.z = | 8  -5   0  | = -136
+			|-4   2   4  |
+
+
+So now we can get the value using this method...x = (DEL.x)/DEL
+
+		  x = (DEL.x)/DEL
+		    = 69/-7
+		    = -69/7
+
+		  y = (DEL.y)/DEL
+		    = 56/-7
+		    = -8
+
+		  z = (DEL.z)/DEL
+		    = -136/-7
+		    = 136/7
+
