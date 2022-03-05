@@ -42,6 +42,8 @@
 		<Unit filename="fractionMatrix/lcm.cpp" />
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
+		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
+		<Unit filename="linearSystem.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix.h" />
 		<Unit filename="normalMatrix/addition&amp;subtraction.cpp" />
@@ -52,8 +54,9 @@
 		<Unit filename="normalMatrix/matrixMultiplication.cpp" />
 		<Unit filename="normalMatrix/matrixTranspose.cpp" />
 		<Unit filename="normalMatrix/multiplicationWithConstant.cpp" />
-		<Unit filename="solution.txt" />
-		<Unit filename="text.txt" />
+		<Unit filename="solution1.txt" />
+		<Unit filename="solution2.txt" />
+		<Unit filename="text1.txt" />
 		<Unit filename="text2.txt" />
 		<Extensions />
 	</Project>

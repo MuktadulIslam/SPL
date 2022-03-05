@@ -20,7 +20,6 @@ void subMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeCo
 
 
 int matrix_determinant(int *matrix, int row, int column) {
-
     if(matrix == NULL) {
         cout << "Matrix Determinant can't possible!!!!!!  Because matrix is NULL" <<endl;
         return INT_MAX;

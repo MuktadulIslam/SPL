@@ -1,0 +1,47 @@
+		*******Solution of linear system using Cramer's law*******
+
+Given, the systems of linear equations:
+			x -  y + z = 6
+			-x - 4y + 2z = 8
+			3x + 3y + z = 6
+
+Which in matrix format is: 
+ _           _    _ _        _ _
+|  1  -1   1  |  | x |      | 6 |
+| -1  -4   2  |  | y |  =   | 8 |
+|  3   3   1  |  | z |      | 6 |
+|_           _|  |_ _|      |_ _|
+
+
+Now,
+			| 1  -1   1  |
+      DEL = |-1  -4   2  | = -8
+			| 3   3   1  |
+
+			| 6  -1   1  |
+	DEL.x = | 8  -4   2  | = -16
+			| 6   3   1  |
+
+			| 1   6   1  |
+	DEL.y = |-1   8   2  | = 8
+			| 3   6   1  |
+
+			| 1  -1   6  |
+	DEL.z = |-1  -4   8  | = -24
+			| 3   3   6  |
+
+
+So now we can get the value using this method...x = (DEL.x)/DEL
+
+		  x = (DEL.x)/DEL
+		    = -16/-8
+		    = 2
+
+		  y = (DEL.y)/DEL
+		    = 8/-8
+		    = -1
+
+		  z = (DEL.z)/DEL
+		    = -24/-8
+		    = 3
+

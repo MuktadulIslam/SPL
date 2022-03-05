@@ -55,7 +55,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646433902 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1646465625 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
@@ -69,7 +69,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646423592 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_matrix.cpp
+1646473639 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_matrix.cpp
 	<bits/stdc++.h>
 
 1646338483 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\addition&subtraction.cpp
@@ -79,7 +79,7 @@
 1645215985 c:\users\user\onedrive\documents\github\spl\\n-header.h
 	<bits/stdc++.h>
 
-1646338475 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
+1646505187 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 
@@ -87,7 +87,7 @@
 	<bits/stdc++.h>
 	"matrix.h"
 
-1646338454 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
+1646504872 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 
@@ -107,7 +107,7 @@
 	<bits/stdc++.h>
 	"fmatrix.h"
 
-1646434176 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+1646465658 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
@@ -135,13 +135,13 @@
 1646417544 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
-1646433781 c:\users\user\onedrive\documents\github\spl\matrix.h
+1646460135 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
 1646417544 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
-1646433781 c:\users\user\onedrive\documents\github\spl\\matrix.h
+1646460135 c:\users\user\onedrive\documents\github\spl\\matrix.h
 	<bits/stdc++.h>
 
 1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
@@ -157,4 +157,10 @@
 
 1646433809 c:\users\user\onedrive\documents\github\spl\linearsystem.h
 	<bits/stdc++.h>
+
+1646461670 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinginversematrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"fmatrix.h"
+	"linearSystem.h"
 

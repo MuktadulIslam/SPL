@@ -83,7 +83,7 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 
 
     /* For
-         _ _     _           _     _ _
+         _ _     _           _ (-)    _ _
         | x |   |  5   1   3  |   | 1 |
      => | y | = |  8  -5   2  | X | 0 |
         | z |   | -4   2  -1  |   | 4 |
@@ -126,13 +126,14 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 
 
     /* For
-             _          _      _ _
-		  	| 5   1   3  |    | 1 |
-		  = | 8  -5   2  | X  | 0 |
-		  	|-4   2  -1  |    | 4 |
+              _          _      _ _
+		  	| 0   1   0  |    | 9 |
+		  = | 0   2   1  | X  | 6 |
+		  	| 0   0   0  |    | 2 |
 	        |_          _|    |_ _|
 
     */
+        mat = matrix_inverse(matrix, row, column);
         // for "_       _"
         write << "\t         _";
         for(i=0 ; i<column ; i++)
@@ -145,13 +146,13 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
                 write << "= ";
                 write << "|";
                 for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(matrix + i*column + j) << "  ";
+                    write << setw(2) << *(mat + i*column + j) << "  ";
                 write  << "| X  ";
             }
             else {
                 write << "\t|";
                 for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(matrix + i*column + j) << "  ";
+                    write << setw(2) << *(mat + i*column + j) << "  ";
                 write  << "|    ";
             }
 
@@ -164,12 +165,6 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
         for(i=0 ; i<column ; i++)
             write << "   ";
         write << " _|    |_ _|" << endl << endl;
-
-
-
-
-
-
 
 
 }

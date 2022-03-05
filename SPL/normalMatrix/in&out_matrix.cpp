@@ -42,38 +42,20 @@ int * input_matrix_from_console(int *row, int *column){
     return matrix;
 }
 
-
-void print_matrix(int *matrix, int row, int column) {
+ void print_matrix(int *matrix, int row, int column) {
     if(matrix == NULL) {
         cout << "The matrix is empty!!!!!" << endl;
         return;
     }
-
     else {
         int i, j;
-
-        // for "_       _"
-
-        cout << " _";
-        for(i=0 ; i<column ; i++) cout << "   ";
-        cout << "_" << endl;
-
         for(i=0 ; i<row ; i++){
-            cout << "| ";
             for(j=0 ; j<column ; j++) {
-                printf("%4d  ", *(matrix + i*column + j));
+                cout << *(matrix + i*column + j) << "  ";
             }
-
-            cout << "|" << endl;
+            cout << endl;
         }
-
-        // for "|_     _|"
-
-        cout << "|_ ";
-        for(i=1 ; i<column ; i++) cout << "   ";
-        cout << " _|" << endl;
-
+        cout << endl;
     }
-}
-
+ }
 
