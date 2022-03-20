@@ -37,9 +37,11 @@
 		<Unit filename="equation.txt" />
 		<Unit filename="fmatrix.h" />
 		<Unit filename="fractionMatrix/faddition&amp;subtraction.cpp" />
+		<Unit filename="fractionMatrix/fdeterminant.cpp" />
 		<Unit filename="fractionMatrix/getNumber.cpp" />
 		<Unit filename="fractionMatrix/in&amp;out_fmatrix.cpp" />
-		<Unit filename="fractionMatrix/lcm.cpp" />
+		<Unit filename="fractionMatrix/leastCommonMultiple.cpp" />
+		<Unit filename="greatestCommonDivisor.cpp" />
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />

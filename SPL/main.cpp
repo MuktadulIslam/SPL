@@ -6,7 +6,13 @@
 using namespace std;
 
 int main(void) {
-    bool v = true;
+    int row, column, *matrix, det[2];
+    matrix = input_fmatrix_from_file("text1.txt",&row, &column);
+    fmatrix_determinant(matrix, row, column, &det[0]);
+    cout << det[0] << '/' << det[1];
+    //print_fmatrix(matrix, row, column);
+
+    /*bool v = true;
     int choice1, choice2, choice3, choice4;
         cout << "1. Matrix Operation" << endl;
         cout << "2. Linera System Solver" << endl;
@@ -162,6 +168,6 @@ int main(void) {
         }
         else {
             cout << "Invalid choice!!!!\n";
-        }
+        }*/
 }
 

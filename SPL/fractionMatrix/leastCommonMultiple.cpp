@@ -3,6 +3,11 @@ using namespace std;
 
 // least common multiple
 int lcm(int x, int y) {
+    if(x*y == 0){
+        cout << "Least Common Multiple cant't posible...." << endl;
+        return 0 ;
+    }
+
     if(x<0) x = -x;
     if(y<0) y = -y;
 

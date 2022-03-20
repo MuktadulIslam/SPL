@@ -34,10 +34,12 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
             else if(*p >= '0' && *p <= '9') {
                 if(!gotDivident) {
                     p = getNumber(p, sign, matrix);    // reading divident
+                    sign = '+';
                     matrix++;
                     gotDivident = true;
                 }
                 else if(gotSlash && gotDivident) {
+                    sign = '+';
                     p = getNumber(p, sign, matrix);    // reading divisor
                     matrix++;
                     gotSlash = false;
@@ -47,6 +49,7 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
                     *matrix++ = 1;
 
                     p = getNumber(p, sign, matrix);    // reading divident
+                    sign = '+';
                     if(*p != '\0')
                         matrix++;
                     gotDivident = true;
@@ -91,11 +94,13 @@ int * input_fmatrix_from_console(int *row, int *column) {
             else if(*p >= '0' && *p <= '9') {
                 if(!gotDivident) {
                     p = getNumber(p, sign, matrix);    // reading divident
+                    sign = '+';
                     matrix++;
                     gotDivident = true;
                 }
                 else if(gotSlash && gotDivident) {
-                    p = getNumber(p, sign, matrix);    // reading divisor
+                    sign = '+';
+                    p = getNumber(p, sign , matrix);    // reading divisor
                     matrix++;
                     gotSlash = false;
                     gotDivident = false;
@@ -104,6 +109,7 @@ int * input_fmatrix_from_console(int *row, int *column) {
                     *matrix++ = 1;
 
                     p = getNumber(p, sign, matrix);    // reading divident
+                    sign = '+';
                     if(*p != '\0')
                         matrix++;
                     gotDivident = true;

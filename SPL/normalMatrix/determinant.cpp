@@ -36,7 +36,7 @@ int matrix_determinant(int *matrix, int row, int column) {
 
     else {
         int i, j, sum = 0, sign = 1, temp[row-1][row-1];
-        for(i=0 ; i<row ; i++) {
+        for(i=0 ; i<column ; i++) {
             subMatrix (matrix, &temp[0][0], row, 0, i);
             sum = sum + (*(matrix+i)) * matrix_determinant(&temp[0][0], row-1, column-1) * sign;
             sign = -sign;

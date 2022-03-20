@@ -11,6 +11,9 @@ void print_fmatrix(int *matrix, int row, int column);
 int * fmatrix_addition(int *matrix1, int row1, int column1, int *matrix2, int row2, int column2);
 int * fmatrix_subtraction(int *matrix1, int row1, int column1, int *matrix2, int row2, int column2);
 
+void fmatrix_determinant(int *matrix, int row, int column, int *value);
+
 
 int lcm(int x, int y);
+int gcd(int x, int y);
 char * getNumber(char *p, char sign, int *matrix);

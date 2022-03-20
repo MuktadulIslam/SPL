@@ -55,7 +55,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1646465625 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1647740621 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
@@ -79,7 +79,7 @@
 1645215985 c:\users\user\onedrive\documents\github\spl\\n-header.h
 	<bits/stdc++.h>
 
-1646505187 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
+1646518810 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\determinant.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 
@@ -125,20 +125,20 @@
 1646340989 source:c:\users\user\onedrive\documents\github\spl\test.cpp
 	<bits/stdc++.h>
 
-1646345919 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
+1647740111 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 
 1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
 	<bits/stdc++.h>
 
-1646417544 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
+1647736921 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
 1646460135 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
-1646417544 c:\users\user\onedrive\documents\github\spl\fmatrix.h
+1647736921 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
 1646460135 c:\users\user\onedrive\documents\github\spl\\matrix.h
@@ -163,4 +163,17 @@
 	"matrix.h"
 	"fmatrix.h"
 	"linearSystem.h"
+
+1647740680 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fdeterminant.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+
+1647734836 source:c:\users\user\onedrive\documents\github\spl\greatcommondivisor.cpp
+	<bits/stdc++.h>
+
+1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\leastcommonmultiple.cpp
+	<bits/stdc++.h>
+
+1647738902 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\greatestcommondivisor.cpp
+	<bits/stdc++.h>
 
