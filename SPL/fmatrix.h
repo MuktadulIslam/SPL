@@ -12,6 +12,10 @@ int * fmatrix_addition(int *matrix1, int row1, int column1, int *matrix2, int ro
 int * fmatrix_subtraction(int *matrix1, int row1, int column1, int *matrix2, int row2, int column2);
 
 void fmatrix_determinant(int *matrix, int row, int column, int *value);
+void subfMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeColumn);
+int * fmatrix_transpose(int *matrix, int row, int column);
+int * fmatrix_adjoint(int *matrix, int row, int column);
+int * fmatrix_inverse(int *matrix, int row, int column);
 
 
 int lcm(int x, int y);

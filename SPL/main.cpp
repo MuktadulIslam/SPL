@@ -6,10 +6,14 @@
 using namespace std;
 
 int main(void) {
-    int row, column, *matrix, det[2];
+    int row, column, *matrix, det[2], *matrix2;
     matrix = input_fmatrix_from_file("text1.txt",&row, &column);
-    fmatrix_determinant(matrix, row, column, &det[0]);
-    cout << det[0] << '/' << det[1];
+//    fmatrix_determinant(matrix, row, column, &det[0]);
+//    cout << det[0] << '/' << det[1] << endl;
+    matrix2 = fmatrix_inverse(matrix, row, column);
+    print_fmatrix(matrix2, row, column);
+//    solution_by_cramersRules("equation.txt", "solution2.txt");
+
     //print_fmatrix(matrix, row, column);
 
     /*bool v = true;

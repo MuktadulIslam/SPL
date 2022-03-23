@@ -16,9 +16,7 @@ void subfMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeC
                 *temp = *(matrix + i*row*2 + j*2 + 1);
                 temp++;
             }
-            //cout << "Bindu" << endl;
         }
-        //cout << "MUktadul" << endl;
     }
 }
 
@@ -39,15 +37,13 @@ void fmatrix_determinant(int *matrix, int row, int column, int *value) {
         p = sum;
         *value = *matrix;
         *(value+1) = *(matrix+1);
-        //cout << sum[0] << '/' << sum[1];
     }
 
     else {
-        int i, j, *p, temp2, sum[2] = {0,1}, sign = 1, temp[(row-1)*2][(column-1)*2], det[2];
+        int i, j, *p, temp2, sum[2] = {0,1}, sign = 1, temp[(row-1)][(column-1)*2], det[2];
         p = det;
         for(i=0 ; i<row ; i++) {
             subfMatrix (matrix, &temp[0][0], row, 0, i);
-            print_fmatrix(&temp[0][0], row-1, column-1);
             fmatrix_determinant(&temp[0][0], row-1, column-1, p);       //  2/5.....*p = 2.....*(p+1) = 5
 
 
@@ -70,8 +66,9 @@ void fmatrix_determinant(int *matrix, int row, int column, int *value) {
             sum[0] = sum[0]*temp2 / sum[1] + (*p * temp2 / (*(p+1)));
             sum[1] = temp2;
         }
-        *value = sum[0];
-        *(value+1) = sum[1];
+        i = gcd(sum[0],sum[1]);
+        *value = sum[0]/i;
+        *(value+1) = sum[1]/i;
     }
 }
 

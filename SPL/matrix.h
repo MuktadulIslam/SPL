@@ -18,7 +18,6 @@ int * matrix_multiplication_with_constant(int constant, int *matrix, int row, in
 int * matrix_transpose(int *matrix, int row, int column);
 
 int * matrix_adjoint(int *matrix, int row, int column);
-void matrix_inverse_withPrint_byAdj(int *matrix, int row, int column);
 int * matrix_inverse(int *matrix, int row, int column);
 
 

@@ -55,7 +55,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1647740621 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1648073247 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"fmatrix.h"
@@ -87,7 +87,7 @@
 	<bits/stdc++.h>
 	"matrix.h"
 
-1646504872 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
+1648072249 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\matrixinverse.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 
@@ -132,16 +132,16 @@
 1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
 	<bits/stdc++.h>
 
-1647736921 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
+1648073026 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
-1646460135 c:\users\user\onedrive\documents\github\spl\matrix.h
+1648071902 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
-1647736921 c:\users\user\onedrive\documents\github\spl\fmatrix.h
+1648073026 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
-1646460135 c:\users\user\onedrive\documents\github\spl\\matrix.h
+1648071902 c:\users\user\onedrive\documents\github\spl\\matrix.h
 	<bits/stdc++.h>
 
 1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
@@ -164,16 +164,28 @@
 	"fmatrix.h"
 	"linearSystem.h"
 
-1647740680 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fdeterminant.cpp
+1648072703 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fdeterminant.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 
 1647734836 source:c:\users\user\onedrive\documents\github\spl\greatcommondivisor.cpp
 	<bits/stdc++.h>
 
-1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\leastcommonmultiple.cpp
+1647741283 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\leastcommonmultiple.cpp
 	<bits/stdc++.h>
 
-1647738902 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\greatestcommondivisor.cpp
+1647741263 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\greatestcommondivisor.cpp
 	<bits/stdc++.h>
+
+1648069782 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixtranspose.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+
+1648071652 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixadjoint.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+
+1648073343 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixinverse.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
 
