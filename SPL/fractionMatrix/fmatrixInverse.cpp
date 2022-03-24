@@ -17,8 +17,9 @@ int * fmatrix_inverse(int *matrix, int row, int column) {
         int i, j, a, b, c, det[2], *p, *mat;
         p = det;
 
-        mat = fmatrix_adjoint(matrix, row, column);
         fmatrix_determinant(matrix, row, column, p);
+        if(*p == 0) return NULL;        // beacuse there exits no inverse
+        mat = fmatrix_adjoint(matrix, row, column);
 
 
         if(*p > 0) {

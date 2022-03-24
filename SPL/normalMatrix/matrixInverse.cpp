@@ -16,8 +16,9 @@ int * matrix_inverse(int *matrix, int row, int column) {
     else {
         int i, j , det, *mat;
 
-        mat = matrix_adjoint(matrix, row, column);
         det = matrix_determinant(matrix, row, column);
+        if (det == 0) return NULL;      // beacuse there exits no inverse
+        mat = matrix_adjoint(matrix, row, column);
 
         for(i=0 ; i<row ; i++)
             for(j=0 ; j<column ; j++)

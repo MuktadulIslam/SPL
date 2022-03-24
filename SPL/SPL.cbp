@@ -39,6 +39,9 @@
 		<Unit filename="fmatrix.h" />
 		<Unit filename="fractionMatrix/faddition&amp;subtraction.cpp" />
 		<Unit filename="fractionMatrix/fdeterminant.cpp" />
+		<Unit filename="fractionMatrix/fmatrixAdjoint.cpp" />
+		<Unit filename="fractionMatrix/fmatrixInverse.cpp" />
+		<Unit filename="fractionMatrix/fmatrixTranspose.cpp" />
 		<Unit filename="fractionMatrix/getNumber.cpp" />
 		<Unit filename="fractionMatrix/greatestCommonDivisor.cpp" />
 		<Unit filename="fractionMatrix/in&amp;out_fmatrix.cpp" />

@@ -4,9 +4,9 @@
 using namespace std;
 
 int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
-    int i, j, *matrix, *temp;
+    int i, j, *matrix, *temp, Count;
     char str[200], *p, sign;
-    bool gotDivident, gotSlash;
+    bool gotDivident, gotdivisor, gotSlash;
 
     freopen(fileName, "r" , stdin);
     cin >> *row >> *column;
@@ -19,6 +19,8 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
     for(i=0 ; i < *row ; i++) {
         gotDivident = false;
         gotSlash = false;
+        gotdivisor = true;
+        Count = 0;
         sign = '+';
 
         cin.getline(str,200);
@@ -29,6 +31,10 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
 
             else if(*p == '+' || *p == '-') {
                 sign = *p;
+                if (!gotdivisor) {
+                    *matrix++ = 1;
+                    Count++;
+                }
                 gotDivident = false;
             }
             else if(*p >= '0' && *p <= '9') {
@@ -36,36 +42,41 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
                     p = getNumber(p, sign, matrix);    // reading divident
                     sign = '+';
                     matrix++;
+                    Count++;
                     gotDivident = true;
+                    gotdivisor = false;
                 }
                 else if(gotSlash && gotDivident) {
                     sign = '+';
                     p = getNumber(p, sign, matrix);    // reading divisor
                     matrix++;
+                    Count++;
                     gotSlash = false;
                     gotDivident = false;
+                    gotdivisor = true;
                 }
                 else if (!gotSlash && gotDivident) {
                     *matrix++ = 1;
+                    Count++;
 
-                    p = getNumber(p, sign, matrix);    // reading divident
-                    sign = '+';
-                    if(*p != '\0')
-                        matrix++;
-                    gotDivident = true;
+                    gotDivident = false;
+                    gotdivisor = true;
+                    p--;
                 }
             }
         }
+        if(Count < *row * 2) *matrix++ = 1;
     }
-
     return temp;
 }
 
 
+
+
 int * input_fmatrix_from_console(int *row, int *column) {
-    int i, j, *matrix, *temp;
+    int i, j, *matrix, *temp, Count;
     char str[200], *p, sign;
-    bool gotDivident, gotSlash;
+    bool gotDivident, gotdivisor, gotSlash;
 
     cout << "Enter the number of row and column:  ";
     cin >> *row >> *column;
@@ -79,6 +90,8 @@ int * input_fmatrix_from_console(int *row, int *column) {
     for(i=0 ; i < *row ; i++) {
         gotDivident = false;
         gotSlash = false;
+        gotdivisor = true;
+        Count = 0;
         sign = '+';
 
         cin.getline(str,200);
@@ -89,6 +102,10 @@ int * input_fmatrix_from_console(int *row, int *column) {
 
             else if(*p == '+' || *p == '-') {
                 sign = *p;
+                if (!gotdivisor) {
+                    *matrix++ = 1;
+                    Count++;
+                }
                 gotDivident = false;
             }
             else if(*p >= '0' && *p <= '9') {
@@ -96,28 +113,31 @@ int * input_fmatrix_from_console(int *row, int *column) {
                     p = getNumber(p, sign, matrix);    // reading divident
                     sign = '+';
                     matrix++;
+                    Count++;
                     gotDivident = true;
+                    gotdivisor = false;
                 }
                 else if(gotSlash && gotDivident) {
                     sign = '+';
-                    p = getNumber(p, sign , matrix);    // reading divisor
+                    p = getNumber(p, sign, matrix);    // reading divisor
                     matrix++;
+                    Count++;
                     gotSlash = false;
                     gotDivident = false;
+                    gotdivisor = true;
                 }
                 else if (!gotSlash && gotDivident) {
                     *matrix++ = 1;
+                    Count++;
 
-                    p = getNumber(p, sign, matrix);    // reading divident
-                    sign = '+';
-                    if(*p != '\0')
-                        matrix++;
-                    gotDivident = true;
+                    gotDivident = false;
+                    gotdivisor = true;
+                    p--;
                 }
             }
         }
+        if(Count < *row * 2) *matrix++ = 1;
     }
-
     return temp;
 }
 
