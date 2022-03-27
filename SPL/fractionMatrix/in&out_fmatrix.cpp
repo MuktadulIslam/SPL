@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include "fmatrix.h"
+#include "matrix.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
     cin >> *row >> *column;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
 
-    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2);
+    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2 + 1);
     temp = matrix;
 
 
@@ -67,6 +68,7 @@ int * input_fmatrix_from_file(char *fileName, int *row, int *column) {
         }
         if(Count < *row * 2) *matrix++ = 1;
     }
+    *matrix = INT_MAX;
     return temp;
 }
 
@@ -82,7 +84,7 @@ int * input_fmatrix_from_console(int *row, int *column) {
     cin >> *row >> *column;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
 
-    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2);
+    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2 + 1);
     temp = matrix;
 
 
@@ -138,6 +140,7 @@ int * input_fmatrix_from_console(int *row, int *column) {
         }
         if(Count < *row * 2) *matrix++ = 1;
     }
+    *matrix = INT_MAX;
     return temp;
 }
 
@@ -150,33 +153,47 @@ void print_fmatrix(int *matrix, int row, int column) {
     }
 
     else {
-        int i, j, t, t1, t2, a, b;
-        for(i=0 ; i<row ; i++){
-            for(j=0 ; j<column ; j++) {
-                a = *(matrix + i*column*2 + j*2);
-                b = *(matrix + i*column*2 + j*2 + 1);
+        // Checking it's fmatrix or normal matrix;
+        int *temp = matrix, Count = 0;
+        while(*temp != INT_MAX && Count <= row*column*2) {
+            temp++;
+            Count++;
+        }
 
-                if(a%b == 0)     // if divident % divisor == 0
-                    cout << a/b << "    ";
-                else if(b%a == 0) {     // if divisor % divident == 0
-                    if(b/a >= 0)
-                        cout << "1/" << b/a << "   ";
-                    else
-                        cout << "-1/" << -b/a << "   ";
-                }
-                else {
-                    t = lcm(a , b);
-                    t1 = t/b;
-                    t2 = t/a;
 
-                    if(t2 >= 0)
-                        cout << t1 << '/' << t2 << "   ";
-                    else if(t2<0)
-                        cout << -t1 << '/' << -t2 << "   ";
+        if(Count == row * column * 2) {
+            int i, j, t, t1, t2, a, b;
+            for(i=0 ; i<row ; i++){
+                for(j=0 ; j<column ; j++) {
+                    a = *(matrix + i*column*2 + j*2);
+                    b = *(matrix + i*column*2 + j*2 + 1);
+
+                    if(a%b == 0)     // if divident % divisor == 0
+                        cout << a/b << "    ";
+                    else if(b%a == 0) {     // if divisor % divident == 0
+                        if(b/a >= 0)
+                            cout << "1/" << b/a << "   ";
+                        else
+                            cout << "-1/" << -b/a << "   ";
+                    }
+                    else {
+                        t = lcm(a , b);
+                        t1 = t/b;
+                        t2 = t/a;
+
+                        if(t2 >= 0)
+                            cout << t1 << '/' << t2 << "   ";
+                        else if(t2<0)
+                            cout << -t1 << '/' << -t2 << "   ";
+                    }
                 }
+                cout << endl;
             }
             cout << endl;
         }
-        cout << endl;
+
+        else {
+            print_matrix(matrix, row, column);
+        }
     }
 }

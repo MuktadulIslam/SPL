@@ -5,13 +5,13 @@ using namespace std;
 
 int * fmatrix_transpose(int *matrix, int row, int column) {
     if(matrix == NULL) {
-        cout << "Matrix Transpose can't possible!!!!!!  Because matrix is NULL" <<endl;
+        cout << "fMatrix Transpose can't possible!!!!!!  Because matrix is NULL" <<endl;
         return NULL;
     }
 
     else {
         int i, j, *mat, *temp;
-        mat = (int*) malloc(row * column * sizeof(int) * 2);
+        mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
         temp = mat;
 
         for(i=0 ; i<column ; i++) {
@@ -22,6 +22,7 @@ int * fmatrix_transpose(int *matrix, int row, int column) {
                 mat++;
             }
         }
+        *mat = INT_MAX;
         return temp;
     }
 }

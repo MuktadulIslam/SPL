@@ -5,11 +5,11 @@ using namespace std;
 
 int * fmatrix_inverse(int *matrix, int row, int column) {
     if(matrix == NULL) {
-        cout << "Matrix Inverse by Adj can't possible!!!!!!  Because matrix is NULL" <<endl;
+        cout << "fMatrix Inverse by Adj can't possible!!!!!!  Because matrix is NULL" <<endl;
         return NULL;
     }
     else if (row != column) {
-        cout << "Matrix Inverse by Adj can't possible!!!!!!  Because row and column are not same" <<endl;
+        cout << "fMatrix Inverse by Adj can't possible!!!!!!  Because row and column are not same" <<endl;
         return NULL;
     }
 
@@ -18,7 +18,12 @@ int * fmatrix_inverse(int *matrix, int row, int column) {
         p = det;
 
         fmatrix_determinant(matrix, row, column, p);
-        if(*p == 0) return NULL;        // beacuse there exits no inverse
+
+            if(*p == 0) {
+                cout << "fMatrix Inverse by Adj can't possible!!!!!!  Because fmatrix determinant is zero!!!" <<endl;
+                return NULL;        // beacuse there exits no inverse
+            }
+
         mat = fmatrix_adjoint(matrix, row, column);
 
 

@@ -23,11 +23,11 @@ void subfMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeC
 
 void fmatrix_determinant(int *matrix, int row, int column, int *value) {
     if(matrix == NULL) {
-        cout << "Matrix Determinant can't possible!!!!!!  Because matrix is NULL" <<endl;
+        cout << "fMatrix Determinant can't possible!!!!!!  Because matrix is NULL" <<endl;
         return;
     }
     else if (row != column) {
-        cout << "Matrix Determinant can't possible!!!!!!  Because row and column are not same" <<endl;
+        cout << "fMatrix Determinant can't possible!!!!!!  Because row and column are not same" <<endl;
         return;
     }
 

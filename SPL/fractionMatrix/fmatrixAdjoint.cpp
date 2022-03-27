@@ -5,11 +5,11 @@ using namespace std;
 
 int * fmatrix_adjoint(int *matrix, int row, int column) {
     if(matrix == NULL) {
-        cout << "Matrix Adjoint can't possible!!!!!!  Because matrix is NULL" <<endl;
+        cout << "fMatrix Adjoint can't possible!!!!!!  Because matrix is NULL" <<endl;
         return NULL;
     }
     else if (row != column) {
-        cout << "Matrix Adjoint can't possible!!!!!!  Because row and column are not same" <<endl;
+        cout << "fMatrix Adjoint can't possible!!!!!!  Because row and column are not same" <<endl;
         return NULL;
     }
 

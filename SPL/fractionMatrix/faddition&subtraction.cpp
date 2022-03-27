@@ -23,7 +23,7 @@ int * fmatrix_addition(int *matrix1, int row1, int column1, int *matrix2, int ro
 
     else {
         int i, j, *matrix, *temp, t, t1, t2;
-        matrix = (int*) malloc(row1 * column1 * sizeof(int) * 2);
+        matrix = (int*) malloc(row1 * column1 * sizeof(int) * 2 + 1);
         temp = matrix;
 
         for(i=0 ; i<row1 ; i++) {
@@ -47,6 +47,7 @@ int * fmatrix_addition(int *matrix1, int row1, int column1, int *matrix2, int ro
                 }
             }
         }
+        *matrix = INT_MAX;
         return temp;
     }
 }
@@ -72,7 +73,7 @@ int * fmatrix_subtraction(int *matrix1, int row1, int column1, int *matrix2, int
 
     else {
         int i, j, *matrix, *temp, t, t1, t2;
-        matrix = (int*) malloc(row1 * column1 * sizeof(int) * 2);
+        matrix = (int*) malloc(row1 * column1 * sizeof(int) * 2 + 1);
         temp = matrix;
 
         for(i=0 ; i<row1 ; i++) {
@@ -96,6 +97,7 @@ int * fmatrix_subtraction(int *matrix1, int row1, int column1, int *matrix2, int
                 }
             }
         }
+        *matrix = INT_MAX;
         return temp;
     }
 }

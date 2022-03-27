@@ -17,7 +17,10 @@ int * matrix_inverse(int *matrix, int row, int column) {
         int i, j , det, *mat;
 
         det = matrix_determinant(matrix, row, column);
-        if (det == 0) return NULL;      // beacuse there exits no inverse
+        if(det == 0) {
+            cout << "Matrix Inverse by Adj can't possible!!!!!!  Because matrix determinant is zero!!!" <<endl;
+            return NULL;        // beacuse there exits no inverse
+        }
         mat = matrix_adjoint(matrix, row, column);
 
         for(i=0 ; i<row ; i++)
