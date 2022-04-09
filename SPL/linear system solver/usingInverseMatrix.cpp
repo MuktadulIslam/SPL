@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
+#include "normal_matrix.h"
 #include "matrix.h"
-#include "fmatrix.h"
 #include "linearSystem.h"
 
 using namespace std;
@@ -133,7 +133,7 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 	        |_          _|    |_ _|
 
     */
-        mat = matrix_inverse(matrix, row, column);
+        mat = normal_matrix_inverse(matrix, row, column);
         // for "_       _"
         write << "\t         _";
         for(i=0 ; i<column ; i++)

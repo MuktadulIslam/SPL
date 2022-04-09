@@ -1,0 +1,4 @@
+It is used to write a given number of bytes on the given stream, starting at the position of the "put" pointer.
+The file is extended if the put pointer is currently at the end of the file. If this pointer points into
+the middle of the file, characters in the file are overwritten with the new data.
+To write a binary file in C++ use write method.

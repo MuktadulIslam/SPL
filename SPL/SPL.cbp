@@ -13,7 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="C:/Users/User/OneDrive/Documents/GitHub/SPL/" />
+					<Add directory="../SPL" />
+					<Add directory="C:/Users/User/OneDrive/Documents/GitHub/SPL/texts" />
+					<Add directory="C:/Users/User/OneDrive/Documents/GitHub/SPL/header files" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -33,36 +35,50 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="normalMatrix" />
+			<Add directory="C:/Users/User/OneDrive/Documents/GitHub/SPL/" />
+			<Add directory="C:/Users/User/OneDrive/Documents/GitHub/SPL/texts" />
 		</Compiler>
+		<Unit filename="cryptography/decryption.cpp" />
+		<Unit filename="cryptography/encryption.cpp" />
+		<Unit filename="cryptography/key.cpp" />
+		<Unit filename="cryptography/makeMatrix.cpp" />
+		<Unit filename="cryptography/makeSring.cpp" />
+		<Unit filename="decryptedText.txt" />
+		<Unit filename="encryptedText.txt" />
 		<Unit filename="equation.txt" />
-		<Unit filename="fmatrix.h" />
-		<Unit filename="fractionMatrix/faddition&amp;subtraction.cpp" />
-		<Unit filename="fractionMatrix/fdeterminant.cpp" />
-		<Unit filename="fractionMatrix/fmatrixAdjoint.cpp" />
-		<Unit filename="fractionMatrix/fmatrixInverse.cpp" />
-		<Unit filename="fractionMatrix/fmatrixMultiplication.cpp" />
-		<Unit filename="fractionMatrix/fmatrixTranspose.cpp" />
-		<Unit filename="fractionMatrix/getNumber.cpp" />
-		<Unit filename="fractionMatrix/greatestCommonDivisor.cpp" />
-		<Unit filename="fractionMatrix/in&amp;out_fmatrix.cpp" />
-		<Unit filename="fractionMatrix/leastCommonMultiple.cpp" />
+		<Unit filename="header files/cryptography.h" />
+		<Unit filename="header files/linearSystem.h" />
+		<Unit filename="header files/matrix.h" />
+		<Unit filename="header files/normal_matrix.h" />
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
-		<Unit filename="linearSystem.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="matrix.h" />
-		<Unit filename="normalMatrix/addition&amp;subtraction.cpp" />
-		<Unit filename="normalMatrix/determinant.cpp" />
-		<Unit filename="normalMatrix/in&amp;out_matrix.cpp" />
-		<Unit filename="normalMatrix/matrixAdjoint.cpp" />
-		<Unit filename="normalMatrix/matrixInverse.cpp" />
-		<Unit filename="normalMatrix/matrixMultiplication.cpp" />
-		<Unit filename="normalMatrix/matrixTranspose.cpp" />
-		<Unit filename="normalMatrix/multiplicationWithConstant.cpp" />
+		<Unit filename="matrix/addition&amp;subtraction.cpp" />
+		<Unit filename="matrix/determinant.cpp" />
+		<Unit filename="matrix/getNumber.cpp" />
+		<Unit filename="matrix/greatestCommonDivisor.cpp" />
+		<Unit filename="matrix/in&amp;out_matrix.cpp" />
+		<Unit filename="matrix/isFractionalMatrix.cpp" />
+		<Unit filename="matrix/leastCommonMultiple.cpp" />
+		<Unit filename="matrix/matrixAdjoint.cpp" />
+		<Unit filename="matrix/matrixInverse.cpp" />
+		<Unit filename="matrix/matrixMemoryOptimization.cpp" />
+		<Unit filename="matrix/matrixMultiplication.cpp" />
+		<Unit filename="matrix/matrixTranspose.cpp" />
+		<Unit filename="matrix/multiplicationWithConstant.cpp" />
+		<Unit filename="normalMatrix/in&amp;out_normal_matrix.cpp" />
+		<Unit filename="normalMatrix/normal _matrix_transpose.cpp" />
+		<Unit filename="normalMatrix/normal_matrix_addition&amp;subtraction.cpp" />
+		<Unit filename="normalMatrix/normal_matrix_adjoint.cpp" />
+		<Unit filename="normalMatrix/normal_matrix_determinant.cpp" />
+		<Unit filename="normalMatrix/normal_matrix_multiplication.cpp" />
+		<Unit filename="normalMatrix/normal_matrix_multiplicationWithConstant.cpp" />
+		<Unit filename="normalMatrix/normal_matrixi_inverse.cpp" />
+		<Unit filename="plaintext.txt" />
 		<Unit filename="solution1.txt" />
 		<Unit filename="solution2.txt" />
+		<Unit filename="student.dat" />
 		<Unit filename="text1.txt" />
 		<Unit filename="text2.txt" />
 		<Extensions />

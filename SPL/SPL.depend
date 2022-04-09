@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1645211724 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\main.cpp
+1649311382 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\main.cpp
 	<bits/stdc++.h>
-	"header.h"
+	"matrix.h"
+	"linearSystem.h"
 
 1645211761 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\header.h
 	<bits/stdc++.h>
@@ -55,11 +56,12 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1648194463 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1649539981 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
-	"fmatrix.h"
 	"linearSystem.h"
+	"normal_matrix.h"
+	"cryptography.h"
 
 1645214139 source:c:\users\user\onedrive\documents\github\spl\matrixadjoint.cpp
 	<bits/stdc++.h>
@@ -103,14 +105,15 @@
 	<bits/stdc++.h>
 	"matrix.h"
 
-1648175107 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\faddition&subtraction.cpp
+1648757642 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\faddition&subtraction.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
-
-1646465658 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
-	<bits/stdc++.h>
 	"matrix.h"
-	"fmatrix.h"
+
+1649191370 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+	"matrix.h"
 	"linearSystem.h"
 
 1645215985 c:\users\user\onedrive\documents\github\spl\n-header.h
@@ -125,7 +128,7 @@
 1646340989 source:c:\users\user\onedrive\documents\github\spl\test.cpp
 	<bits/stdc++.h>
 
-1648194563 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
+1648916109 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_fmatrix.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 	"matrix.h"
@@ -133,65 +136,457 @@
 1646433175 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\lcm.cpp
 	<bits/stdc++.h>
 
-1648174209 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
+1648919261 c:\users\user\onedrive\documents\github\spl\\fmatrix.h
 	<bits/stdc++.h>
 
-1648071902 c:\users\user\onedrive\documents\github\spl\matrix.h
+1649193370 c:\users\user\onedrive\documents\github\spl\matrix.h
 	<bits/stdc++.h>
 
-1648174209 c:\users\user\onedrive\documents\github\spl\fmatrix.h
+1648916271 c:\users\user\onedrive\documents\github\spl\fmatrix.h
 	<bits/stdc++.h>
 
-1648071902 c:\users\user\onedrive\documents\github\spl\\matrix.h
+1648919704 c:\users\user\onedrive\documents\github\spl\\matrix.h
 	<bits/stdc++.h>
 
-1646340451 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
+1649191754 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\getnumber.cpp
 	<bits/stdc++.h>
-	"fmatrix.h"
+	"matrix.h"
 
-1646418236 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
+1649191758 source:c:\users\user\onedrive\documents\github\spl\linear system solver\equationinput.cpp
 	<bits/stdc++.h>
-	"fmatrix.h"
+	"matrix.h"
 
 1646433809 c:\users\user\onedrive\documents\github\spl\\linearsystem.h
 	<bits/stdc++.h>
 
-1646433809 c:\users\user\onedrive\documents\github\spl\linearsystem.h
+1649191962 c:\users\user\onedrive\documents\github\spl\linearsystem.h
 	<bits/stdc++.h>
 
-1646461670 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinginversematrix.cpp
+1649191377 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinginversematrix.cpp
 	<bits/stdc++.h>
+	"normal_matrix.h"
 	"matrix.h"
-	"fmatrix.h"
 	"linearSystem.h"
 
-1648174336 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fdeterminant.cpp
+1648761162 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fdeterminant.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
+	"matrix.h"
 
 1647734836 source:c:\users\user\onedrive\documents\github\spl\greatcommondivisor.cpp
 	<bits/stdc++.h>
 
-1647741283 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\leastcommonmultiple.cpp
+1649191822 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\leastcommonmultiple.cpp
 	<bits/stdc++.h>
+	"matrix.h"
 
-1647741263 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\greatestcommondivisor.cpp
+1649191831 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\greatestcommondivisor.cpp
 	<bits/stdc++.h>
+	"matrix.h"
 
-1648175057 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixtranspose.cpp
-	<bits/stdc++.h>
-	"fmatrix.h"
-
-1648174345 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixadjoint.cpp
-	<bits/stdc++.h>
-	"fmatrix.h"
-
-1648174511 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixinverse.cpp
-	<bits/stdc++.h>
-	"fmatrix.h"
-
-1648194535 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixmultiplication.cpp
+1648909473 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixtranspose.cpp
 	<bits/stdc++.h>
 	"fmatrix.h"
 	"matrix.h"
+
+1648909859 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixadjoint.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+	"matrix.h"
+
+1648911243 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixinverse.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+	"matrix.h"
+
+1648751674 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\fmatrixmultiplication.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+	"matrix.h"
+
+1648916048 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\scanmatrix.cpp
+	<bits/stdc++.h>
+	"fmatrix.h"
+	"matrix.h"
+
+1649191522 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\isfractionalmatrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192204 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\faddition&subtraction.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192260 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\fdeterminant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192304 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\fmatrixadjoint.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192325 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\fmatrixinverse.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192201 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\fmatrixmultiplication.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192286 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\fmatrixtranspose.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649191754 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\getnumber.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191831 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\greatestcommondivisor.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192134 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\in&out_fmatrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649191522 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\isfractionalmatrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191822 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\leastcommonmultiple.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192101 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\scanmatrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191758 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\linear system solver\equationinput.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191370 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\linear system solver\usingcramer'srule.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+	"matrix.h"
+	"linearSystem.h"
+
+1649191377 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\linear system solver\usinginversematrix.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+	"matrix.h"
+	"linearSystem.h"
+
+1649190954 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\addition&subtraction.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190946 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\determinant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190937 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\in&out_matrix.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190913 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\matrixadjoint.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190893 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\matrixinverse.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190903 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\matrixmultiplication.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190879 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190866 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1648916271 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fmatrix.h
+	<bits/stdc++.h>
+
+1649193370 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\matrix.h
+	<bits/stdc++.h>
+
+1649191962 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\linearsystem.h
+	<bits/stdc++.h>
+
+1649193567 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649190536 c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normal_matrix.h
+	<bits/stdc++.h>
+
+1649192204 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\addition&subtraction.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192260 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\determinant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192134 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\in&out_matrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649311049 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\matrixadjoint.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649311124 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\matrixinverse.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192201 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\matrixmultiplication.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649194257 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649190937 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\in&out_normal_matrix.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190879 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal _matrix_transpose.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190954 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrix_addition&subtraction.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190913 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrix_adjoint.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190946 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrix_determinant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190903 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrix_multiplication.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190866 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrix_multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649311276 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\normalmatrix\normal_matrixi_inverse.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649192101 source:c:\users\user\onedrive\documents\3rd semester\software project lab i (se-305)\spl\fractionmatrix\matrixmemoryoptimization.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192204 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\addition&subtraction.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649190536 c:\users\user\onedrive\documents\github\spl\normal_matrix.h
+	<bits/stdc++.h>
+
+1649192260 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\determinant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192134 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\in&out_matrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649311049 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\matrixadjoint.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649311124 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\matrixinverse.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192101 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\matrixmemoryoptimization.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192201 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\matrixmultiplication.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649194257 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649193567 source:c:\users\user\onedrive\documents\github\spl\fractionmatrix\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649190937 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\in&out_normal_matrix.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190879 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal _matrix_transpose.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190954 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrix_addition&subtraction.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649311390 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrix_adjoint.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190946 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrix_determinant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190903 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrix_multiplication.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649190866 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrix_multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649311276 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\normal_matrixi_inverse.cpp
+	<bits/stdc++.h>
+	"normal_matrix.h"
+
+1649339415 c:\users\user\onedrive\documents\github\spl\cryptography.h
+	<bits/stdc++.h>
+
+1649540471 source:c:\users\user\onedrive\documents\github\spl\cryptography\key.cpp
+	<bits/stdc++.h>
+
+1649540327 source:c:\users\user\onedrive\documents\github\spl\cryptography\encryption.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"cryptography.h"
+
+1649193370 c:\users\user\onedrive\documents\github\spl\header files\matrix.h
+	<bits/stdc++.h>
+
+1649190536 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
+	<bits/stdc++.h>
+
+1649191962 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
+	<bits/stdc++.h>
+
+1649533759 c:\users\user\onedrive\documents\github\spl\header files\cryptography.h
+	<bits/stdc++.h>
+
+1649451335 source:c:\users\user\onedrive\documents\github\spl\matrix\addition&subtraction.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192260 source:c:\users\user\onedrive\documents\github\spl\matrix\determinant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649191754 source:c:\users\user\onedrive\documents\github\spl\matrix\getnumber.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191831 source:c:\users\user\onedrive\documents\github\spl\matrix\greatestcommondivisor.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649192134 source:c:\users\user\onedrive\documents\github\spl\matrix\in&out_matrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649191522 source:c:\users\user\onedrive\documents\github\spl\matrix\isfractionalmatrix.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649191822 source:c:\users\user\onedrive\documents\github\spl\matrix\leastcommonmultiple.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649311049 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixadjoint.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649311124 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixinverse.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649192101 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmemoryoptimization.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+
+1649449432 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmultiplication.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649451359 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixtranspose.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649193567 source:c:\users\user\onedrive\documents\github\spl\matrix\multiplicationwithconstant.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
+
+1649193370 c:\users\user\onedrive\documents\github\spl\header files\\matrix.h
+	<bits/stdc++.h>
+
+1649190536 c:\users\user\onedrive\documents\github\spl\header files\\normal_matrix.h
+	<bits/stdc++.h>
+
+1649191962 c:\users\user\onedrive\documents\github\spl\header files\\linearsystem.h
+	<bits/stdc++.h>
+
+1649339415 c:\users\user\onedrive\documents\github\spl\header files\\cryptography.h
+	<bits/stdc++.h>
+
+1649537120 source:c:\users\user\onedrive\documents\github\spl\cryptography\makematrix.cpp
+	"cryptography.h"
+
+1649537138 source:c:\users\user\onedrive\documents\github\spl\cryptography\makesring.cpp
+	<bits/stdc++.h>
+	"cryptography.h"
+
+1649538339 source:c:\users\user\onedrive\documents\github\spl\cryptography\decryption.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"cryptography.h"
 

@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
+#include "normal_matrix.h"
 #include "matrix.h"
-#include "fmatrix.h"
 #include "linearSystem.h"
 
 using namespace std;
@@ -121,7 +121,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
             write << "|" ;
 
             if(i == row/2) {
-                del = matrix_determinant(matrix, row, column);
+                del = normal_matrix_determinant(matrix, row, column);
                 write << " = " << del;
             }
             write << endl;
@@ -149,7 +149,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                 write << "|" ;
 
                 if(i == row/2) {
-                    del_x[k] = matrix_determinant(mat, row, column);
+                    del_x[k] = normal_matrix_determinant(mat, row, column);
                     write << " = " << del_x[k];
                 }
                 write << endl;
