@@ -14,7 +14,7 @@ int * matrix_multiplication_with_constant(int constant, int *matrix, int row, in
         matrix++;
 
         int i, j, divisor, divident, GCD, *mat, *temp;
-        mat = (int*) malloc(row * column * 2 * sizeof(int) + 1);
+        mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
         temp = mat;
         *mat++ = INT_MAX;
 

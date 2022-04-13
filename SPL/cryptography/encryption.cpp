@@ -47,12 +47,8 @@ void encryption(string plaintextFile, string encryptedFile) {
         matrix2 = matrix_transpose(matrix1, row, column);
 
         tempString = matrixToString(matrix2, column, row);
-        cout << tempString<<endl;
         strcpy(str, tempString.c_str());
         write.write(str, row*column);
-
-        print_matrix(matrix2, column, row);
-
 
         free(matrix1);
         free(matrix2);

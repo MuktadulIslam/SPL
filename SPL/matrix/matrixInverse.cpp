@@ -55,7 +55,7 @@ int * inverse_with_fractional_Adj(int * matrix, int row, int column, int *det) {
 int * inverse_with_normal_Adj(int * matrix, int row, int column, int *det) {
 
     int i,j, divisor, divident, GCD, *mat;
-    mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     *mat++ = INT_MAX;
 
     if(*det > 0) {

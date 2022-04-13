@@ -15,7 +15,7 @@ int * matrix_transpose(int *matrix, int row, int column) {
         matrix++;
 
         int i, j, *mat, *temp;
-        mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+        mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
         temp = mat;
         *mat++ = INT_MAX;
 

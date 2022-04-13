@@ -8,10 +8,16 @@ using namespace std;
 void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     int i, j ,k;
     string str;
-    int row, column, *matrix, *dMat, *mat;
+    int a, b,row, column, *matrix1, *matrix2, *dMat, *mat;
     char *variables, *var;
-    input_equation_from_file(equationFileName, &row, &column, &matrix, &dMat, &variables);
+//    input_fequation_from_file(equationFileName, &row, &column, &matrix1, &dMat, &variables);
+    char v[] = {'x','y', 'z'};
+    variables = v;
 
+    dMat = input_matrix_from_file("text2.txt", &a, &b);
+    print_matrix(dMat, a, b);
+    matrix1 = input_matrix_from_file("text3.txt",&row, &column);
+    print_matrix(matrix1, row, column);
 
     ifstream read (equationFileName);
     ofstream write (solutionFileName);
@@ -26,14 +32,9 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     }
 
 
-    /* For
-        Given, the systems of linear equations:
-			2x - 3y +4z = 3
-			x + 4y - 5z = 0
-			5x -  y +z = 5
-    */
-        write << "\t\t*******Solution of linear system using Cramer's law*******" << endl << endl;
+    write << "\t\t*******Solution of linear system using Cramer's law*******" << endl << endl;
         read >> row;
+        int del_x[row], del;
         read.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
         write << "Given, the systems of linear equations:" << endl;
         for(i=0 ; i<row ; i++) {
@@ -41,130 +42,21 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
             write << "\t\t\t" << str << endl;
         }
 
+    // Creating [X] = [A]-1[B]
+//    cout << row << column << endl;
+    row++;
+    matrix2 = matrix_inverse(matrix1, row, column);
+    print_matrix(matrix2, row, column);
+    matrix2 = matrix_multiplication(matrix2, row, column, dMat, a, b);
+    print_matrix(matrix2, row, 1);
 
-    /* For
-        Which in matrix format is:
-         _           _    _ _        _ _
-        |  2  -3   4  |  | x |      | 3 |
-        |  1   4  -5  |  | y |  =   | 0 |
-        |  5  -1   1  |  | z |      | 5 |
-        |_           _|  |_ _|      |_ _|
-    */
-    write << endl << "Which in matrix format is: \n";
-        // for "_       _"
-        write << " _ ";
-        for(i=0 ; i<column ; i++) write << "   ";
-        write << " _    _ _        _ _" << endl;
+    // Writhing in file
+    write << "\n\n\n";
+    for(i=0 ; i<row ; i++){
+        write << "\t  " << *(variables+i) << " = " << *(matrix1+i*2) << "/" << *(matrix1+i*2+1);
+        write << endl << endl;
+    }
 
-        for(i=0 ; i<row ; i++){
-            write << "| ";
-            for(j=0 ; j<column ; j++) {
-                write << setw(2) << *(matrix + i*column + j) << "  ";
-            }
-            write << "|  ";
-
-            write << "| " << *(variables+i) << " |";   // For print variables matrix
-
-            if(i == row/2) {
-                write << "  =   ";
-                write  << "| " << *(dMat+i) << " |";
-            }
-            else
-                write  << "      | " << *(dMat+i) << " |";
-            write << endl;
-        }
-
-        // for "|_     _|"
-
-        write << "|_ ";
-        for(i=0 ; i<column ; i++) write << "   ";
-        write << " _|  |_ _|      |_ _|" << endl << endl;
-
-
-
-    /* For
-         _ _     _           _ (-)    _ _
-        | x |   |  5   1   3  |   | 1 |
-     => | y | = |  8  -5   2  | X | 0 |
-        | z |   | -4   2  -1  |   | 4 |
-        |_ _|   |_           _|   |_ _|
-	*/
-        // for "_       _"
-        write << "\t _ _     _";
-        for(i=0 ; i<column ; i++)
-            write << "   ";
-        write << "  _(-)  _ _" << endl;
-
-        for(i=0 ; i<row ; i++){
-            if(i == row/2) {
-                write << " => | " << *(variables+i) << " |";   // For print variables matrix
-                write << " = ";
-                write << "| ";
-                for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(matrix + i*column + j) << "  ";
-                write  << "| X ";
-            }
-            else {
-                write << "\t| " << *(variables+i) << " |";   // For print variables matrix
-                write << "   | ";
-                for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(matrix + i*column + j) << "  ";
-                write  << "|   ";
-            }
-
-            write << "| " << dMat[i] << " |";
-
-            write << endl;
-        }
-
-        write << "\t|_ _|   |_";
-        for(i=0 ; i<column ; i++)
-            write << "   ";
-        write << "  _|   |_ _|" << endl;
-
-
-
-
-    /* For
-              _          _      _ _
-		  	| 0   1   0  |    | 9 |
-		  = | 0   2   1  | X  | 6 |
-		  	| 0   0   0  |    | 2 |
-	        |_          _|    |_ _|
-
-    */
-        mat = normal_matrix_inverse(matrix, row, column);
-        // for "_       _"
-        write << "\t         _";
-        for(i=0 ; i<column ; i++)
-            write << "   ";
-        write << " _      _ _" << endl;
-
-        for(i=0 ; i<row ; i++){
-            write << "\t\t  ";   // For print variables matrix
-            if(i == row/2) {
-                write << "= ";
-                write << "|";
-                for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(mat + i*column + j) << "  ";
-                write  << "| X  ";
-            }
-            else {
-                write << "\t|";
-                for(j=0 ; j<column ; j++)
-                    write << setw(2) << *(mat + i*column + j) << "  ";
-                write  << "|    ";
-            }
-
-            write << "| " << dMat[i] << " |";
-
-            write << endl;
-        }
-
-        write << "\t        |_";
-        for(i=0 ; i<column ; i++)
-            write << "   ";
-        write << " _|    |_ _|" << endl << endl;
-
-
+    write.close();
+    read.close();
 }

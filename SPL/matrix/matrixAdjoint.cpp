@@ -21,7 +21,7 @@ int * matrix_adjoint(int *matrix, int row, int column) {
             p = det;
 
             int *mat, *temp, m[row-1+1][(column-1)*2];
-            mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+            mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
             temp = mat;
 
                 *mat++ = INT_MAX;       // intializing x[0][column] = INT_MAX to recognize as fmatrix

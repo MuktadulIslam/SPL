@@ -13,7 +13,7 @@ int * input_matrix_from_file(char *fileName, int *row, int *column) {
     cin >> *row >> *column;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
 
-    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2 + 1);
+    matrix = (int*) malloc(((*row) * (*column)  * 2 + 1)*sizeof(int));
     temp = matrix;
     *matrix++ = INT_MAX;
 
@@ -85,7 +85,7 @@ int * input_matrix_from_console(int *row, int *column) {
     cin >> *row >> *column;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
 
-    matrix = (int*) malloc((*row) * (*column) * sizeof(int) * 2 + 1);
+    matrix = matrix = (int*) malloc(((*row) * (*column)  * 2 + 1)*sizeof(int));
     temp = matrix;
     *matrix++ = INT_MAX;
 

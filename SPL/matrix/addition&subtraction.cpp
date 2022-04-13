@@ -6,7 +6,7 @@ using namespace std;
 
 int * fmatVSfmat_add(int *matrix1, int *matrix2, int row, int column) {
     int i, j, *matrix, *temp, LCM, m1, m2, fm1, fm2;
-    matrix = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    matrix = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     temp = matrix;
 
     *matrix++ = INT_MAX;
@@ -39,7 +39,7 @@ int * fmatVSfmat_add(int *matrix1, int *matrix2, int row, int column) {
 
 int * matVSfmat_add(int *matrix, int *fmatrix, int row, int column) {
     int i, j, *mat, *temp, LCM, m1, fm1, fm2 ;
-    mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     temp = mat;
 
     *mat++ = INT_MAX;
@@ -62,7 +62,7 @@ int * matVSfmat_add(int *matrix, int *fmatrix, int row, int column) {
 
 int * fmatVSfmat_subtraction(int *matrix1, int *matrix2, int row, int column) {
     int i, j, *matrix, *temp, LCM, m1, m2, fm1, fm2;
-    matrix = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    matrix = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     temp = matrix;
 
     *matrix++ = INT_MAX;
@@ -95,7 +95,7 @@ int * fmatVSfmat_subtraction(int *matrix1, int *matrix2, int row, int column) {
 
 int * matVSfmat_subtraction(int *matrix, int *fmatrix, int row, int column) {
     int i, j, *mat, *temp, LCM, m1, fm1, fm2 ;
-    mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     temp = mat;
 
     *mat++ = INT_MAX;
@@ -118,7 +118,7 @@ int * matVSfmat_subtraction(int *matrix, int *fmatrix, int row, int column) {
 
 int * fmatVSmat_subtraction(int *fmatrix, int *matrix, int row, int column) {
     int i, j, *mat, *temp, LCM, m1, fm1, fm2 ;
-    mat = (int*) malloc(row * column * sizeof(int) * 2 + 1);
+    mat = (int*) malloc((row * column  * 2 + 1)*sizeof(int));
     temp = mat;
 
     *mat++ = INT_MAX;
