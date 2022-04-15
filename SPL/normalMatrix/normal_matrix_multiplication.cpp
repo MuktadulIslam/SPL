@@ -26,7 +26,7 @@ int * normal_matrix_multiplication(int *matrix1, int row1, int column1, int *mat
             for(j=0 ; j<column2 ; j++) {
                 temp1 = 0;
                 for(k=0 ; k<column1 ; k++) {
-                    temp1 = temp1 + *(matrix1 + i*row1 + k) *  *(matrix2 + k*row2 + j);
+                    temp1 = temp1 + *(matrix1 + i*column1 + k) *  *(matrix2 + k*column2 + j);
                 }
                 *matrix = temp1;
                 matrix++;

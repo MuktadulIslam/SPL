@@ -14,14 +14,6 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     print_matrix(matrix1, row, column);
     print_matrix(dMat, row, 1);
 
-//    char v[] = {'x','y', 'z'};
-//    variables = v;
-//
-//    dMat = input_matrix_from_file("text2.txt", &a, &b);
-//    print_matrix(dMat, a, b);
-//    matrix1 = input_matrix_from_file("text3.txt",&row, &column);
-//    print_matrix(matrix1, row, column);
-
     ifstream read (equationFileName);
     ofstream write (solutionFileName);
 
@@ -46,21 +38,33 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
         }
 
     // Creating [X] = [A]-1[B]
-//    cout << row << column << endl;
 
     matrix2 = matrix_inverse(matrix1, row, column);
     print_matrix(matrix2, row, column);
-    matrix2 = matrix_multiplication(matrix2, row, column, dMat, a, b);
+    matrix2 = matrix_multiplication(matrix2, row, column, dMat, row, 1);
     print_matrix(matrix2, row, 1);
 
     // Writhing in file
     write << "\n\n\n";
-    for(i=0 ; i<row ; i++){
-        write << "\t  " << *(variables+i) << " = " << *(matrix1+i*2) << "/" << *(matrix1+i*2+1);
-        write << endl << endl;
+    if(is_fractional_matrix(matrix2)) {
+        for(i=0 ; i<row ; i++) {
+            if(*(matrix2 + i*2 + 1) == 1)
+                write << "\t  " << *(variables+i) << " = " << *(matrix2+i*2);
+            else
+                write << "\t  " << *(variables+i) << " = " << *(matrix2+i*2) << *(matrix2+i*2+1);
+        }
     }
+
+    else {
+        for(i=0 ; i<row ; i++){
+            write << "\t  " << *(variables+i) << " = " << *(matrix2+i);
+            write << endl << endl;
+        }
+    }
+
 
     write.close();
     read.close();
-    cout << "row = " << row << "    column = " << column << endl;
+
+    cout << endl << "Solution is successfully written in \"" << solutionFileName << "\"" << endl;
 }

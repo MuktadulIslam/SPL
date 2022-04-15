@@ -90,6 +90,7 @@ int * fmatVSmat_mult(int *matrix1, int row1, int column1, int *matrix2, int row2
             matrix++;
         }
     }
+
     return matrix_memory_optimization(temp, row1, column2);
 }
 

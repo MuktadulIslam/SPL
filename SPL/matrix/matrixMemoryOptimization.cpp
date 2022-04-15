@@ -4,17 +4,25 @@
 using namespace std;
 
 int * matrix_memory_optimization(int * matrix, int row, int column) {
-    int i, j, *mat = matrix+1;
+    int i, j, GCD, *mat = matrix+1, *dividend, *divisor;
     bool flag = true;
 
     for(i=0 ; i<row ; i++){
+
         for(j=0 ; j<column ; j++){
-            if(*(mat + i*column*2 + j*2 + 1) != 1){
+            dividend = mat + i*column*2 + j*2;
+            divisor = mat + i*column*2 + j*2 + 1 ;
+
+            if(*dividend != 0){
+                GCD = gcd(*dividend, *divisor);
+                *dividend = *dividend/GCD;
+                *divisor = *divisor/GCD;
+            }
+
+            if(*divisor != 1){
                 flag = false;
-                break;
             }
         }
-        if(!flag) break;
     }
 
     if(flag) {

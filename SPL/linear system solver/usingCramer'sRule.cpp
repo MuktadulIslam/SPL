@@ -192,7 +192,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
     write.close();
     read.close();
 
-    cout << endl << "Solution is successfully written in " << equationFileName << endl;
+    cout << endl << "Solution is successfully written in \"" << solutionFileName << "\"" << endl;
 }
 
 
