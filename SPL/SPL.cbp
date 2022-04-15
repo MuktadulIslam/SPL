@@ -78,9 +78,9 @@
 		<Unit filename="plaintext.txt" />
 		<Unit filename="solution1.txt" />
 		<Unit filename="solution2.txt" />
-		<Unit filename="student.dat" />
 		<Unit filename="text1.txt" />
 		<Unit filename="text2.txt" />
+		<Unit filename="text3.txt" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

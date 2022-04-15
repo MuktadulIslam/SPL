@@ -3,6 +3,15 @@
 
 using namespace std;
 
+int get_variable_index(char variables[], char variable) {
+    for(int i=0 ; variables[i] ; i++) {
+        if(variables[i] == variable)
+            return i;
+    }
+    return -1;
+}
+
+
 void input_fequation_from_console(int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
 
     char *p, str[200], *variables, sign = '+', temp1[10], temp2[10];
@@ -224,9 +233,10 @@ void input_fequation_from_file(char *fileName, int *row, int *column, int **coef
 }
 
 
+
 void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat) {
     char *p, str[200], *variables, sign = '+', temp1[10], temp2[10];
-    int i, j, k, l, *matrix, *dMat;
+    int i, j, k, l, *matrix, *dMat, coefficient;
     bool gotVariable, gotCoefficient, gotEqualSign, flag;
 
     freopen(fileName, "r" , stdin);
@@ -241,6 +251,15 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
     dMat = (int*) malloc((*row) * sizeof(int));
     variables = (char*) malloc(*row);
 
+    for(char *temp = variables, i=0 ; i<*row ; i++)
+        *temp++ = 0;
+
+    int tempMatrix[*row][*column];
+    for(i=0 ; i<*row ; i++)
+        for(j=0 ; j<*column ; j++)
+            tempMatrix[i][j] = 0;
+
+
     *coefficientMat = matrix;
     *Dmatrix = dMat;
     *variablesMat = variables;
@@ -248,10 +267,11 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
 
 
     for(i=0 ; i < *row ; i++) {
-        gotVariable = false;
+        gotVariable = true;
         gotCoefficient = false;
         gotEqualSign = false;
         sign = '+';
+        coefficient = 0;
 
         cin.getline(str,200);
 
@@ -274,27 +294,39 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
 
                     break;      // No need to continue the loop, because the equation is over
                 }
-                else if(!gotCoefficient  && !gotVariable) {
-                    p = getNumber(p, sign, matrix);
-                    matrix++;
+                else if(!gotCoefficient  && gotVariable) {
+                    p = getNumber(p, sign, &coefficient);
                     gotCoefficient = true;
                 }
             }
 
-            else if(*p >= 'a' && *p <= 'z'   ||   *p >= 'A' && *p <= 'Z') {
-
-                if(!gotCoefficient) {      // x + 2y = 1,,,,,,coefficient of 'x' will be 1
-                    if(sign == '+')
-                        *matrix++ = 1;
-                    else
-                       *matrix++ = -1;
-                }
+            else if(*p >= 'a' && *p <= 'z'   ||   *p >= 'A' && *p <= 'Z'){
 
                 if(i == 0) {    // i=0,,,,,,because no need to get the variables again
                    *variables++ = *p;
                 }
+
+                if(!gotCoefficient) {      // x + 2y = 1,,,,,,coefficient of 'x' will be 1
+                    if(sign == '+')
+                        tempMatrix[i][get_variable_index(*variablesMat, *p)]= 1;
+
+                    else
+                        tempMatrix[i][get_variable_index(*variablesMat, *p)]= -1;
+                }
+                else{
+                    tempMatrix[i][get_variable_index(*variablesMat, *p)] = coefficient;
+                }
+
                 gotCoefficient = false;
+                gotVariable = true;
             }
         }
     }
+
+    for(i=0 ; i<*row ; i++) {
+        for(j=0 ; j<*column ; j++) {
+            *matrix++ = tempMatrix[i][j];
+        }
+    }
 }
+

@@ -1,14 +1,12 @@
 		*******Solution of linear system using Cramer's law*******
 
 Given, the systems of linear equations:
-			x + 2y = 4
-			3x − 5y = 1
+			-5y + 3x = 1
+			x = 4
 
 
 
-	  x = 2/-3
+	  y = -5/3
 
-	  y = 4/1
-
-	  z = 4/-5
+	  x = 0/1
 

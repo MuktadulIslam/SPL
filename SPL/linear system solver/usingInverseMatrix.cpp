@@ -10,14 +10,17 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     string str;
     int a, b,row, column, *matrix1, *matrix2, *dMat, *mat;
     char *variables, *var;
-//    input_fequation_from_file(equationFileName, &row, &column, &matrix1, &dMat, &variables);
-    char v[] = {'x','y', 'z'};
-    variables = v;
-
-    dMat = input_matrix_from_file("text2.txt", &a, &b);
-    print_matrix(dMat, a, b);
-    matrix1 = input_matrix_from_file("text3.txt",&row, &column);
+    input_equation_from_file(equationFileName, &row, &column, &matrix1, &dMat, &variables);
     print_matrix(matrix1, row, column);
+    print_matrix(dMat, row, 1);
+
+//    char v[] = {'x','y', 'z'};
+//    variables = v;
+//
+//    dMat = input_matrix_from_file("text2.txt", &a, &b);
+//    print_matrix(dMat, a, b);
+//    matrix1 = input_matrix_from_file("text3.txt",&row, &column);
+//    print_matrix(matrix1, row, column);
 
     ifstream read (equationFileName);
     ofstream write (solutionFileName);
@@ -44,7 +47,7 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 
     // Creating [X] = [A]-1[B]
 //    cout << row << column << endl;
-    row++;
+
     matrix2 = matrix_inverse(matrix1, row, column);
     print_matrix(matrix2, row, column);
     matrix2 = matrix_multiplication(matrix2, row, column, dMat, a, b);
@@ -59,4 +62,5 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 
     write.close();
     read.close();
+    cout << "row = " << row << "    column = " << column << endl;
 }

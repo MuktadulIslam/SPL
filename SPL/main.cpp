@@ -11,7 +11,6 @@ int main(void) {
 
     solution_by_inverseMatrix("equation.txt", "solution2.txt");
 
-
 //    solution_by_inverseMatrix("equation.txt","solution2.txt");
 //    solution_by_cramersRules("equation.txt","solution1.txt");
 //    encryption("plaintext.txt", "encryptedText.bin");
