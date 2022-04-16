@@ -27,14 +27,15 @@ int * new_matrix(int *realMatrix, int row, int column, int *copyMatrix, int inse
 void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
     int i, j ,k;
     string str;
-    int row, column, *matrix, *dMat, *mat;
+    int row, column, *coefficientMatrix, *dMat, *mat;
     char *variables, *var;
-    input_equation_from_file(equationFileName, &row, &column, &matrix, &dMat, &variables);
 
+    // Converting the linera equation to matrix form
+    input_equation_from_file(equationFileName, &row, &column, &coefficientMatrix, &dMat, &variables);
 
+    // Opening the files
     ifstream read (equationFileName);
     ofstream write (solutionFileName);
-
     if(!read.is_open()) {
         cout << "Failed to open the \"" << equationFileName << "\" file!!!!!!" << endl;
         return;
@@ -43,6 +44,10 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
         cout << "Failed to open the \"" << solutionFileName << "\" file!!!!!!" << endl;
         return;
     }
+
+
+
+
 
     /* For
         Given, the systems of linear equations:
@@ -63,22 +68,16 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
     /* For
         Which in matrix format is:
-         _           _    _ _        _ _
+
         |  2  -3   4  |  | x |      | 3 |
         |  1   4  -5  |  | y |  =   | 0 |
         |  5  -1   1  |  | z |      | 5 |
-        |_           _|  |_ _|      |_ _|
     */
     write << endl << "Which in matrix format is: \n";
-        // for "_       _"
-        write << " _ ";
-        for(i=0 ; i<column ; i++) write << "   ";
-        write << " _    _ _        _ _" << endl;
-
         for(i=0 ; i<row ; i++){
-            write << "| ";
+            write << "\t | ";
             for(j=0 ; j<column ; j++) {
-                write << setw(2) << *(matrix + i*column + j) << "  ";
+                write << setw(3) << *(coefficientMatrix + i*column + j) << "  ";
             }
             write << "|  ";
 
@@ -86,18 +85,12 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
             if(i == row/2) {
                 write << "  =   ";
-                write  << "| " << *(dMat+i) << " |";
+                write  << "| " << setw(3) << *(dMat+i) << "  |";
             }
             else
-                write  << "      | " << *(dMat+i) << " |";
+                write  << "      | " << setw(3) << *(dMat+i) << "  |";
             write << endl;
         }
-
-        // for "|_     _|"
-
-        write << "|_ ";
-        for(i=0 ; i<column ; i++) write << "   ";
-        write << " _|  |_ _|      |_ _|" << endl << endl << endl;
 
 
 
@@ -108,7 +101,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
         DEL = | 1   4  -5  | = -8
               | 5  -1   1  |
     */
-        write << "Now," << endl;
+        write << "\nNow," << endl;
         for(i=0 ; i<row ; i++){
             if(i == row/2)
              write << "      DEL = |";
@@ -116,12 +109,12 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                 write << "\t\t\t" << "|";
 
             for(j=0 ; j<column ; j++) {
-                write << setw(2) << *(matrix + i*column + j) << "  ";
+                write << setw(3) << *(coefficientMatrix + i*column + j) << "  ";
             }
             write << "|" ;
 
             if(i == row/2) {
-                del = normal_matrix_determinant(matrix, row, column);
+                del = normal_matrix_determinant(coefficientMatrix, row, column);
                 write << " = " << del;
             }
             write << endl;
@@ -136,7 +129,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
             | 5  -1   1  |
     */
         for(k=0 ; k<row ; k++) {
-            mat = new_matrix(matrix, row, column, dMat, k);
+            mat = new_matrix(coefficientMatrix, row, column, dMat, k);
             for(i=0 ; i<row ; i++){
                 if(i == row/2)
                 write << "\tDEL." << *(variables + k) << " = |";
@@ -144,7 +137,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                     write << "\t\t\t" << "|";
 
                 for(j=0 ; j<column ; j++) {
-                    write << setw(2) << *(mat + i*column + j) << "  ";
+                    write << setw(3) << *(mat + i*column + j) << "  ";
                 }
                 write << "|" ;
 
@@ -169,26 +162,33 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
         write << endl << "So now we can get the value using this method...x = (DEL.x)/DEL" << endl << endl;
 
+        int GCD;
         for(k=0 ; k<row ; k++) {
             write << "\t\t  " << *(variables+k) << " = (DEL." << *(variables+k) << ")/DEL" << endl;
             write << "\t\t    = " << del_x[k] << '/' << del << endl;
 
-            if(del_x[k] % del == 0)
-                write << "\t\t    = " << del_x[k]/del << endl << endl;
-            else if(del % del_x[k] == 0) {
-                if(del / del_x[k] > 0)
-                    write << "\t\t    = 1/" << del/del_x[k] << endl << endl;
-                else
-                    write << "\t\t    = -1/" << -del/del_x[k] << endl << endl;
+            GCD = gcd(del_x[k], del);
+            if(GCD == 1){
+                write << endl;
             }
             else {
-                int temp = lcm(del_x[k],del);
-                if(temp/del_x[k] > 0)
-                    write << "\t\t    = " << temp/del << '/' << temp/del_x[k] << endl << endl;
-                else
-                    write << "\t\t    = " << -temp/del << '/' << -temp/del_x[k] << endl << endl;
+                if(del < 0) {
+                    if(-del/GCD == 1)
+                        write << "\t\t    = " << -del_x[k]/GCD << endl;
+                    else
+                        write << "\t\t    = " << -del_x[k]/GCD << '/' << -del/GCD << endl;
+                }
+                else{
+                    if(del/GCD == 1)
+                        write << "\t\t    = " << del_x[k]/GCD << endl;
+                    else
+                        write << "\t\t    = " << del_x[k]/GCD << '/' << del/GCD << endl;
+                }
             }
+
         }
+
+
     write.close();
     read.close();
 

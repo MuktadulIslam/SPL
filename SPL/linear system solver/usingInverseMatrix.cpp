@@ -11,8 +11,6 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     int a, b,row, column, *matrix1, *matrix2, *dMat, *mat;
     char *variables, *var;
     input_equation_from_file(equationFileName, &row, &column, &matrix1, &dMat, &variables);
-    print_matrix(matrix1, row, column);
-    print_matrix(dMat, row, 1);
 
     ifstream read (equationFileName);
     ofstream write (solutionFileName);
@@ -40,9 +38,7 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
     // Creating [X] = [A]-1[B]
 
     matrix2 = matrix_inverse(matrix1, row, column);
-    print_matrix(matrix2, row, column);
     matrix2 = matrix_multiplication(matrix2, row, column, dMat, row, 1);
-    print_matrix(matrix2, row, 1);
 
     // Writhing in file
     write << "\n\n\n";
