@@ -25,74 +25,34 @@ int * new_matrix(int *realMatrix, int row, int column, int *copyMatrix, int inse
 
 
 void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
-    int i, j ,k;
+    int i, j ,k, maxSize;
     string str;
     int row, column, *coefficientMatrix, *dMat, *mat;
     char *variables, *var;
 
     // Converting the linera equation to matrix form
     input_equation_from_file(equationFileName, &row, &column, &coefficientMatrix, &dMat, &variables);
+    int del_x[row], del;
 
-    // Opening the files
-    ifstream read (equationFileName);
-    ofstream write (solutionFileName);
-    if(!read.is_open()) {
-        cout << "Failed to open the \"" << equationFileName << "\" file!!!!!!" << endl;
-        return;
-    }
+
+    i = max_length_of_number(coefficientMatrix, row, column);
+    j = max_length_of_number(dMat, row, 1);
+    if(i<j)
+        maxSize = j;
+    else
+        maxSize = i;
+
+
+    write_introduction_part("Cramer's law", equationFileName, solutionFileName, coefficientMatrix, row, column, dMat, variables);
+
+
+    // Opening the file
+    ofstream write;
+    write.open(solutionFileName, ios_base::app);
     if(!write.is_open()) {
         cout << "Failed to open the \"" << solutionFileName << "\" file!!!!!!" << endl;
         return;
     }
-
-
-
-
-
-    /* For
-        Given, the systems of linear equations:
-			2x - 3y +4z = 3
-			x + 4y - 5z = 0
-			5x -  y +z = 5
-    */
-        write << "\t\t*******Solution of linear system using Cramer's law*******" << endl << endl;
-        read >> row;
-        int del_x[row], del;
-        read.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
-        write << "Given, the systems of linear equations:" << endl;
-        for(i=0 ; i<row ; i++) {
-            getline(read, str);
-            write << "\t\t\t" << str << endl;
-        }
-
-
-    /* For
-        Which in matrix format is:
-
-        |  2  -3   4  |  | x |      | 3 |
-        |  1   4  -5  |  | y |  =   | 0 |
-        |  5  -1   1  |  | z |      | 5 |
-    */
-    write << endl << "Which in matrix format is: \n";
-        for(i=0 ; i<row ; i++){
-            write << "\t | ";
-            for(j=0 ; j<column ; j++) {
-                write << setw(3) << *(coefficientMatrix + i*column + j) << "  ";
-            }
-            write << "|  ";
-
-            write << "| " << *(variables+i) << " |";   // For print variables matrix
-
-            if(i == row/2) {
-                write << "  =   ";
-                write  << "| " << setw(3) << *(dMat+i) << "  |";
-            }
-            else
-                write  << "      | " << setw(3) << *(dMat+i) << "  |";
-            write << endl;
-        }
-
-
 
 
     /* For
@@ -109,7 +69,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                 write << "\t\t\t" << "|";
 
             for(j=0 ; j<column ; j++) {
-                write << setw(3) << *(coefficientMatrix + i*column + j) << "  ";
+                write << setw(maxSize) << *(coefficientMatrix + i*column + j) << " ";
             }
             write << "|" ;
 
@@ -130,6 +90,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
     */
         for(k=0 ; k<row ; k++) {
             mat = new_matrix(coefficientMatrix, row, column, dMat, k);
+
             for(i=0 ; i<row ; i++){
                 if(i == row/2)
                 write << "\tDEL." << *(variables + k) << " = |";
@@ -137,7 +98,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                     write << "\t\t\t" << "|";
 
                 for(j=0 ; j<column ; j++) {
-                    write << setw(3) << *(mat + i*column + j) << "  ";
+                    write << setw(maxSize) << *(mat + i*column + j) << " ";
                 }
                 write << "|" ;
 
@@ -190,9 +151,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
 
     write.close();
-    read.close();
 
     cout << endl << "Solution is successfully written in \"" << solutionFileName << "\"" << endl;
 }
-
 

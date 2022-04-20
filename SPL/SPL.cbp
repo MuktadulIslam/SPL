@@ -46,13 +46,16 @@
 		<Unit filename="decryptedText.txt" />
 		<Unit filename="encryptedText.txt" />
 		<Unit filename="equation.txt" />
+		<Unit filename="equation2.txt" />
 		<Unit filename="header files/cryptography.h" />
 		<Unit filename="header files/linearSystem.h" />
 		<Unit filename="header files/matrix.h" />
 		<Unit filename="header files/normal_matrix.h" />
 		<Unit filename="linear system solver/equationInput.cpp" />
+		<Unit filename="linear system solver/max_length_of_number.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
+		<Unit filename="linear system solver/write_introduction_part.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix/addition&amp;subtraction.cpp" />
 		<Unit filename="matrix/determinant.cpp" />

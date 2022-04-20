@@ -64,7 +64,6 @@ void write_introduction_part(string title, string equationFileName, string solut
             write << endl;
         }
 
-    write << endl << "Now," << endl;
-    write.close();
-    read.close();
+      write.close();
+      read.close();
 }

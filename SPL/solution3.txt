@@ -1,0 +1,28 @@
+		*******Solution of linear system using Gaussian Elimination*******
+
+Given, the systems of linear equations:
+			x+3y+2z = 5
+			2x+y+3z = 1
+			3x+2y+z = 4
+
+Which in matrix format is: 
+      | 1 3 2 |  | x |      | 5 |
+      | 2 1 3 |  | y |  =   | 1 |
+      | 3 2 1 |  | z |      | 4 |
+
+Now,
+
+      | 1  3  2  | 5 |
+  =>  | 2  1  3  | 1 |
+      | 3  2  1  | 4 |
+
+[r2' = r2*1  r1*2 ]
+[r3' = r3*1  r1*3 ]
+      |   1    3    2  |   5 |
+  =>  |   0   -5   -1  |  -9 |
+      |   0   -7   -5  | -11 |
+
+[r3' = r3*5  r2*7 ]
+      |   1    3    2  |   5 |
+  =>  |   0   -5   -1  |  -9 |
+      |   0    0  -18  |   8 |
