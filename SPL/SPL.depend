@@ -56,7 +56,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1650070739 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1650137660 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"linearSystem.h"
@@ -110,10 +110,10 @@
 	"fmatrix.h"
 	"matrix.h"
 
-1650109666 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
+1650137566 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usingcramer'srule.cpp
 	<bits/stdc++.h>
-	"normal_matrix.h"
 	"matrix.h"
+	"normal_matrix.h"
 	"linearSystem.h"
 
 1645215985 c:\users\user\onedrive\documents\github\spl\n-header.h
@@ -162,9 +162,8 @@
 1649191962 c:\users\user\onedrive\documents\github\spl\linearsystem.h
 	<bits/stdc++.h>
 
-1650070692 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinginversematrix.cpp
+1650137552 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinginversematrix.cpp
 	<bits/stdc++.h>
-	"normal_matrix.h"
 	"matrix.h"
 	"linearSystem.h"
 
@@ -497,10 +496,10 @@
 1649193370 c:\users\user\onedrive\documents\github\spl\header files\matrix.h
 	<bits/stdc++.h>
 
-1649190536 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
+1650134136 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
 	<bits/stdc++.h>
 
-1650109177 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
+1650134387 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
 	<bits/stdc++.h>
 
 1649533759 c:\users\user\onedrive\documents\github\spl\header files\cryptography.h
@@ -594,11 +593,16 @@
 	<bits/stdc++.h>
 	"linearSystem.h"
 
-1650109213 source:c:\users\user\onedrive\documents\github\spl\linear system solver\write_introduction_part.cpp
+1650137513 source:c:\users\user\onedrive\documents\github\spl\linear system solver\write_introduction_part.cpp
 	<bits/stdc++.h>
 	"linearSystem.h"
 
 1650070179 source:c:\users\user\onedrive\documents\github\spl\linear system solver\max_length_of_number.cpp
 	<bits/stdc++.h>
 	"linearSystem.h"
+
+1650138663 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinggaussianelimination.cpp
+	<bits/stdc++.h>
+	"linearSystem.h"
+	"matrix.h"
 

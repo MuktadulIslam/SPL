@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include "normal_matrix.h"
 #include "matrix.h"
 #include "linearSystem.h"
 
@@ -23,7 +22,6 @@ void write_2nd_part_in_SolutionByInvers(string solutionFileName, int *coefficien
     |y| = |  1   4  -5  |    | 0 |
     |z|   |  5  -1   1  |    | 5 |
 */
-    write << endl;
     maxLength = max_length_of_number(coefficientMatrix, row, column);
     for(i=0 ; i<row ; i++){
         // to fit equal sign
@@ -175,12 +173,11 @@ void write_3rd_part_in_SolutionByInvers(string solutionFileName, int *coefficien
 
 
 void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
-    int i, j ,k;
-    string str;
-    int a, b,row, column, *coefficientMatrix, *matrix, *dMat, *mat;
-    char *variables, *var;
+    int row, column, *coefficientMatrix, *matrix, *dMat, *mat;
+    char *variables;
+
+
     input_equation_from_file(equationFileName, &row, &column, &coefficientMatrix, &dMat, &variables);
-    int del_x[row], del;
 
     write_introduction_part("Inverse Matrix", equationFileName, solutionFileName, coefficientMatrix, row, column, dMat, variables);
     write_2nd_part_in_SolutionByInvers(solutionFileName, coefficientMatrix, row, column, dMat, variables);

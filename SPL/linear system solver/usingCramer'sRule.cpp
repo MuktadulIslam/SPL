@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
-#include "normal_matrix.h"
 #include "matrix.h"
+#include "normal_matrix.h"
 #include "linearSystem.h"
 
 using namespace std;
@@ -61,7 +61,6 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
         DEL = | 1   4  -5  | = -8
               | 5  -1   1  |
     */
-        write << "\nNow," << endl;
         for(i=0 ; i<row ; i++){
             if(i == row/2)
              write << "      DEL = |";

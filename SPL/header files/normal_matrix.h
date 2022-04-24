@@ -1,8 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
-
 int * input_normal_matrix_from_file(char *fileName, int *row, int *column);
 int * input_normal_matrix_from_console(int *row, int *column);
 void print_normal_matrix(int *matrix, int row, int column);
