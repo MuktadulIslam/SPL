@@ -18,6 +18,10 @@ int * matrix_memory_optimization(int * matrix, int row, int column) {
                 *dividend = *dividend/GCD;
                 *divisor = *divisor/GCD;
             }
+            else {
+                *dividend = 0;
+                *divisor = 1;
+            }
 
             if(*divisor != 1){
                 flag = false;

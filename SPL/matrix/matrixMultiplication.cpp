@@ -49,7 +49,7 @@ int * matVSfmat_mult(int *matrix1, int row1, int column1, int *matrix2, int row2
                 temp2 = *(matrix2 + i*column2*2 + k*2 + 1);
 
                 LCM = lcm(sum[1], temp2);
-                sum[0] = sum[0]*LCM/sum[1] + temp1*LCM/temp2;
+                sum[0] = sum[0]*(LCM/sum[1]) + temp1*(LCM/temp2);
                 sum[1] = LCM;
             }
 
@@ -59,7 +59,6 @@ int * matVSfmat_mult(int *matrix1, int row1, int column1, int *matrix2, int row2
             matrix++;
         }
     }
-    print_matrix(temp, row1, column2);
     return matrix_memory_optimization(temp, row1, column2);
 }
 
@@ -80,7 +79,7 @@ int * fmatVSmat_mult(int *matrix1, int row1, int column1, int *matrix2, int row2
                 temp2 = *(matrix1 + i*column1*2 + k*2 + 1);
 
                 LCM = lcm(sum[1], temp2);
-                sum[0] = sum[0]*LCM/sum[1] + temp1*LCM/temp2;
+                sum[0] = sum[0]*(LCM/sum[1]) + temp1*(LCM/temp2);
                 sum[1] = LCM;
             }
 

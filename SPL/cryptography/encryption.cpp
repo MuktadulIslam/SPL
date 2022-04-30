@@ -32,30 +32,26 @@ void encryption(string plaintextFile, string encryptedFile) {
 
 
 // this section for Encryption
-    cout << tempString.length() << endl;
     char text[tempString.length()], *plaintext;
     strcpy(text, tempString.c_str());
     plaintext = text;
 
-    int row, column, *matrix1, *matrix2, *KEY;
+    int row, column, *matrix1, *KEY;
+    short *matrix2;
     KEY = key(&row, &column);
-    int mat[row][column];
+    int mat[column][row];
 
     while(*plaintext != '\0'){
-        plaintext = stringToMatrix(&mat[0][0], row, column, plaintext);
-        matrix1 = matrix_subtraction(&mat[0][0], row, column, KEY, row, column);
-        matrix2 = matrix_transpose(matrix1, row, column);
+        plaintext = stringToMatrix(&mat[0][0], column, row, plaintext);
 
-        tempString = matrixToString(matrix2, column, row);
-        strcpy(str, tempString.c_str());
-        write.write(str, row*column);
-
-        free(matrix1);
-        free(matrix2);
+        matrix1 = matrix_multiplication(KEY, row, column, &mat[0][0], column, row);
+        write.write((char *) matrix1, sizeof(int)*row*column);
     }
 
 
 
     write.close();
     read.close();
+
+    cout << "Successfully encrypted!!!!" << ".......Encrypted in \"" << encryptedFile << "\" file \n";
 }

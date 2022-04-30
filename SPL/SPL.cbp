@@ -40,10 +40,12 @@
 		</Compiler>
 		<Unit filename="cryptography/decryption.cpp" />
 		<Unit filename="cryptography/encryption.cpp" />
+		<Unit filename="cryptography/integerMatrix_to_shortMatrix.cpp" />
 		<Unit filename="cryptography/key.cpp" />
 		<Unit filename="cryptography/makeMatrix.cpp" />
 		<Unit filename="cryptography/makeSring.cpp" />
 		<Unit filename="decryptedText.txt" />
+		<Unit filename="encryptedText.bin" />
 		<Unit filename="encryptedText.txt" />
 		<Unit filename="equation.txt" />
 		<Unit filename="equation2.txt" />

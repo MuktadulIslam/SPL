@@ -56,7 +56,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1650137660 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1651291827 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"linearSystem.h"
@@ -485,10 +485,10 @@
 1649339415 c:\users\user\onedrive\documents\github\spl\cryptography.h
 	<bits/stdc++.h>
 
-1649569930 source:c:\users\user\onedrive\documents\github\spl\cryptography\key.cpp
+1651291512 source:c:\users\user\onedrive\documents\github\spl\cryptography\key.cpp
 	<bits/stdc++.h>
 
-1649541564 source:c:\users\user\onedrive\documents\github\spl\cryptography\encryption.cpp
+1651291796 source:c:\users\user\onedrive\documents\github\spl\cryptography\encryption.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"cryptography.h"
@@ -499,10 +499,10 @@
 1650134136 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
 	<bits/stdc++.h>
 
-1650134387 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
+1650138870 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
 	<bits/stdc++.h>
 
-1649533759 c:\users\user\onedrive\documents\github\spl\header files\cryptography.h
+1650144345 c:\users\user\onedrive\documents\github\spl\header files\cryptography.h
 	<bits/stdc++.h>
 
 1649884237 source:c:\users\user\onedrive\documents\github\spl\matrix\addition&subtraction.cpp
@@ -546,11 +546,11 @@
 	"matrix.h"
 	"normal_matrix.h"
 
-1650045943 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmemoryoptimization.cpp
+1651285966 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmemoryoptimization.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 
-1650046709 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmultiplication.cpp
+1651291044 source:c:\users\user\onedrive\documents\github\spl\matrix\matrixmultiplication.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"normal_matrix.h"
@@ -580,11 +580,12 @@
 1649537120 source:c:\users\user\onedrive\documents\github\spl\cryptography\makematrix.cpp
 	"cryptography.h"
 
-1649537138 source:c:\users\user\onedrive\documents\github\spl\cryptography\makesring.cpp
+1651290922 source:c:\users\user\onedrive\documents\github\spl\cryptography\makesring.cpp
 	<bits/stdc++.h>
 	"cryptography.h"
+	"matrix.h"
 
-1649538339 source:c:\users\user\onedrive\documents\github\spl\cryptography\decryption.cpp
+1651291796 source:c:\users\user\onedrive\documents\github\spl\cryptography\decryption.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"cryptography.h"
@@ -605,4 +606,8 @@
 	<bits/stdc++.h>
 	"linearSystem.h"
 	"matrix.h"
+
+1650145157 source:c:\users\user\onedrive\documents\github\spl\cryptography\integermatrix_to_shortmatrix.cpp
+	<bits/stdc++.h>
+	"cryptography.h"
 
