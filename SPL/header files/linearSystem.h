@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#define EPSILON 1e-9
+
 using namespace std;
 
 void input_equation_from_file(char *fileName, int *row, int *column, int **coefficientMat, int **Dmatrix, char **variablesMat);
@@ -12,4 +14,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName);
 void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName);
 void solution_by_GaussianElimination(char *equationFileName, char *solutionFileName);
 void solution_by_GaussJordanMethod(char *equationFileName, char *solutionFileName);
+
+void gauss_jacobi_iteration_method(char *equationFileName);
+void gauss_seidel_iteration_method(char *equationFileName);
 

@@ -12,6 +12,7 @@ int * matrix_multiplication(int *matrix1, int row1, int column1, int *matrix2, i
 int * matrix_multiplication_with_constant(int constant, int *matrix, int row, int column);
 
 void matrix_determinant(int *matrix, int row, int column, int *value);
+int matrix_determinant(int *matrix, int row, int column);
 void subMatrix(int *matrix, int *newMatrix, int row, int removeRow, int removeColumn);
 
 int * matrix_transpose(int *matrix, int row, int column);

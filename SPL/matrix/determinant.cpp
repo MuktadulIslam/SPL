@@ -81,11 +81,15 @@ void matrix_determinant(int *matrix, int row, int column, int *value) {
         return;
     }
 
-    if(*matrix == INT_MAX)
+    if(is_fractional_matrix(matrix))
         fmat_det(matrix+1, row, column, value);
     else {
         *value = normal_matrix_determinant(matrix, row, column);
         *(value+1) = 1;
     }
+}
+
+int matrix_determinant(int *matrix, int row, int column){
+    return normal_matrix_determinant(matrix, row, column);
 }
 
