@@ -185,5 +185,6 @@ void solution_by_inverseMatrix(char *equationFileName, char *solutionFileName) {
 
 
 
-    cout << endl << "Solution is successfully written in \"" << solutionFileName << "\"" << endl;
+    cout << endl << "Solution of \" " << equationFileName  << " \" linear system is successfully written in \""
+    << solutionFileName << "\" by using Inverse Matrix rules" << endl;
 }

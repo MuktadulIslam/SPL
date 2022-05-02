@@ -151,6 +151,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
 
     write.close();
 
-    cout << endl << "Solution is successfully written in \"" << solutionFileName << "\"" << endl;
+    cout << endl << "Solution of \" " << equationFileName  << " \" linear system is successfully written in \""
+    << solutionFileName << "\" by using Cramers Rules rules" << endl;
 }
 

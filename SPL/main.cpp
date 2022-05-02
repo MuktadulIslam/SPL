@@ -8,13 +8,15 @@ using namespace std;
 
 int main(void) {
     int i,j,k = 0,row, column, *matrix1, det[2], *matrix2, *matrix3, *matrix4;
+//    cout << INT_MAX << endl;
 
-//    solution_by_GaussianElimination("equation2.txt", "solution3.txt");
+//    solution_by_GaussJordanMethod("equation.txt", "solution3.txt");
+    solution_by_GaussianElimination("equation.txt", "solution4.txt");
 //    solution_by_inverseMatrix("equation2.txt", "solution2.txt");
 //    solution_by_cramersRules("equation.txt", "solution1.txt");
 
 
-    encryption("plaintext.txt", "encryptedText.bin");
-    decryption("encryptedText.bin", "decryptedText.txt");
+//    encryption("plaintext.txt", "encryptedText.bin");
+//    decryption("encryptedText.bin", "decryptedText.txt");
 
 }

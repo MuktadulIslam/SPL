@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void write_in_file_GaussianElimination(string solutionFileName, int *coefficientMatrix, int row, int column, int dMat[]) {
+void writeValue_in_file_GaussianElimination(string solutionFileName, int *coefficientMatrix, int row, int column, int dMat[], char variables[]) {
     // Opening the file
     ofstream write;
     write.open(solutionFileName, ios_base::app);
@@ -13,82 +13,89 @@ void write_in_file_GaussianElimination(string solutionFileName, int *coefficient
         return;
     }
 
+    write << endl << endl << "So now we get, \n";
+    int GCD, i, j, divisor[row], dividend[row];
+    for(i=row-1 ; i>=0 ; --i) {
+        dividend[i] = 0;
+        divisor[i] = 1;
 
-    int i, j, temp1, temp2, maxLength;
+        /* for addition
+            if 2x + 3y - 4z = 3.....y=3/11, z= 5/7... then
+                dividend[x] = 3(3/11) - 4(5/7)
+                divisor[x] = 11*7
+        */
+        for(j=row-1 ; j>i ; --j){
+            dividend[i] = (dividend[i]*divisor[j]) + (*(coefficientMatrix + i*column + j) * dividend[j] * divisor[i]);
+            cout << dividend[i] << " = " <<  dividend[i] << "*" << divisor[j] << " + " <<
+              *(coefficientMatrix + i*column + j) << "*" << dividend[j] << "*" << divisor[i] << endl;
 
-    temp1 = max_length_of_number(coefficientMatrix, row, column);
-    temp2 = max_length_of_number(dMat, row, 1);
-    if(temp1 > temp2)
-        maxLength = temp1;
-    else
-        maxLength = temp2;
+            divisor[i] = divisor[i] * divisor[j];
+            cout << "dividend[" << i << "] = " << dividend[i] << "  divisor[" << i << "] = " << divisor[i] << endl;
+            if(dividend[i] != 0) {
+                GCD = gcd(dividend[i], divisor[i]);
+                dividend[i] /= GCD;
+                divisor[i] /= GCD;
+            }
+            else {
+                divisor[i] = 1;
+            }
 
-    write << endl;
-    for(i=0 ; i<row ; i++){
-        // to fit equal sign
-        if(i == row/2)
-            write << "  =>  | ";
-        else
-            write << "      | ";
+        }
+
+        /* for finding the value of the variable
+            if 2x + 3y - 4z = 3.....y=3/11, z= 5/7... then
+                x = (3 - dividend[x]/divisor[x])/2
+        */
+        dividend[i] = (dMat[i]*divisor[i]) - dividend[i];
+        divisor[i]  *=   *(coefficientMatrix + i*column + i);
 
 
-        for(j=0 ; j<column ; j++)
-            write << setw(maxLength) << *(coefficientMatrix + i*column + j) << "  ";
+        if(dividend[i] != 0) {
+            if(divisor[i] < 0){
+                divisor[i] = - divisor[i];
+                dividend[i] = - dividend[i];
+            }
 
-        write << "| " << setw(maxLength) << dMat[i] << " |" << endl;
+            GCD = gcd(dividend[i], divisor[i]);
+            dividend[i] /= GCD;
+            divisor[i] /= GCD;
+        }
+        else {
+            divisor[i] = 1;
+        }
+        if(i==3)
+            cout << "dividend[" << i << "] = " << dividend[i] << "  divisor[" << i << "] = " << divisor[i] << endl;
+        cout << endl << "i = " << i << endl;
     }
 
+
+
+    for(i=0 ; i<row ; i++){
+        if(divisor[i] == 1) {
+            write << "\t\t" << variables[i] << " = " << dividend[i] << endl << endl;
+        }
+        else {
+            if(divisor[i] < 0) {
+                write << "\t\t" << variables[i] << " = " << -dividend[i] << "/" << -divisor[i] << endl << endl;
+            }
+            else {
+                write << "\t\t" << variables[i] << " = " << dividend[i] << "/" << divisor[i] << endl << endl;
+            }
+        }
+    }
     write.close();
 }
-
 
 void solution_by_GaussianElimination(char *equationFileName, char *solutionFileName) {
     int row, column, *coefficientMatrix, *matrix, *dMat, *mat;
     char *variables;
-    ofstream write;
-
     input_equation_from_file(equationFileName, &row, &column, &coefficientMatrix, &dMat, &variables);
+
     write_introduction_part("Gaussian Elimination", equationFileName, solutionFileName, coefficientMatrix, row, column, dMat, variables);
+    makeLowerTriangleMatrix(solutionFileName, coefficientMatrix, row, column, dMat);
+    writeValue_in_file_GaussianElimination(solutionFileName, coefficientMatrix, row, column, dMat, variables);
 
-    int i, j, k, multiplier1, multiplier2, LCM, *temp1, *temp2;
-
-    write_in_file_GaussianElimination(solutionFileName, coefficientMatrix, row, column, dMat);
-
-    for(i=0 ; i<row-1 ; i++) {
-        write.open(solutionFileName, ios_base::app);
-
-        for(j=i+1 ; j<row ; j++) {
-            temp1 = (coefficientMatrix + i*column + i);
-            temp2 = (coefficientMatrix + j*column + i);
-
-            LCM = lcm(*temp1 , *temp2);
-            multiplier1 = LCM/ abs(*temp1);
-            multiplier2 = LCM/ abs(*temp2);
-
-            if((*temp1) * (*temp2) > 0) {    // if both are in same sign
-                for(k=0 ; k<column ; k++){
-                    temp1 = coefficientMatrix + i*column + k;
-                    temp2 = coefficientMatrix + j*column + k;
-
-                    *temp2 = (*temp2 * multiplier2) - (*temp1 * multiplier1);
-                }
-                *(dMat+j) = *(dMat+j)*multiplier2 - *(dMat+i)*multiplier1;
-                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << "  " << "r" << i+1 << "*" << multiplier1 << " ]";
-            }
-
-            else {
-                for(k=0 ; k<column ; k++){
-                    temp1 = coefficientMatrix + i*column + k;
-                    temp2 = coefficientMatrix + j*column + k;
-
-                    *temp2 = (*temp2 * multiplier2) + (*temp1 * multiplier1);
-                }
-                *(dMat+j) = *(dMat+j)*multiplier2 + *(dMat+i)*multiplier1;
-                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << " + " << "r" << i+1 << "*" << multiplier1 << " ]";
-            }
-        }
-        write.close();
-
-        write_in_file_GaussianElimination(solutionFileName, coefficientMatrix, row, column, dMat);
-    }
+    cout << endl << "Solution of \" " << equationFileName  << " \" linear system is successfully written in \""
+    << solutionFileName << "\" by using Gaussian Elimination rules" << endl;
 }
+

@@ -53,12 +53,12 @@
 		<Unit filename="header files/linearSystem.h" />
 		<Unit filename="header files/matrix.h" />
 		<Unit filename="header files/normal_matrix.h" />
+		<Unit filename="linear system solver/commonMethodsForLinearSolver.cpp" />
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/max_length_of_number.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
 		<Unit filename="linear system solver/usingGaussianElimination.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
-		<Unit filename="linear system solver/write_introduction_part.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix/addition&amp;subtraction.cpp" />
 		<Unit filename="matrix/determinant.cpp" />
@@ -85,6 +85,7 @@
 		<Unit filename="solution1.txt" />
 		<Unit filename="solution2.txt" />
 		<Unit filename="solution3.txt" />
+		<Unit filename="solution4.txt" />
 		<Unit filename="text1.txt" />
 		<Unit filename="text2.txt" />
 		<Unit filename="text3.txt" />
