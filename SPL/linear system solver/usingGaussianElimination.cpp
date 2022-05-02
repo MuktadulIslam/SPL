@@ -14,7 +14,8 @@ void writeValue_in_file_GaussianElimination(string solutionFileName, int *coeffi
     }
 
     write << endl << endl << "So now we get, \n";
-    int GCD, i, j, divisor[row], dividend[row];
+    int i, j;
+    long long GCD, divisor[row], dividend[row];
     for(i=row-1 ; i>=0 ; --i) {
         dividend[i] = 0;
         divisor[i] = 1;
@@ -25,12 +26,8 @@ void writeValue_in_file_GaussianElimination(string solutionFileName, int *coeffi
                 divisor[x] = 11*7
         */
         for(j=row-1 ; j>i ; --j){
-            dividend[i] = (dividend[i]*divisor[j]) + (*(coefficientMatrix + i*column + j) * dividend[j] * divisor[i]);
-            cout << dividend[i] << " = " <<  dividend[i] << "*" << divisor[j] << " + " <<
-              *(coefficientMatrix + i*column + j) << "*" << dividend[j] << "*" << divisor[i] << endl;
-
+            dividend[i] = (dividend[i]*divisor[j]) + ((long long)*(coefficientMatrix + i*column + j) * dividend[j] * divisor[i]);
             divisor[i] = divisor[i] * divisor[j];
-            cout << "dividend[" << i << "] = " << dividend[i] << "  divisor[" << i << "] = " << divisor[i] << endl;
             if(dividend[i] != 0) {
                 GCD = gcd(dividend[i], divisor[i]);
                 dividend[i] /= GCD;
@@ -46,7 +43,7 @@ void writeValue_in_file_GaussianElimination(string solutionFileName, int *coeffi
             if 2x + 3y - 4z = 3.....y=3/11, z= 5/7... then
                 x = (3 - dividend[x]/divisor[x])/2
         */
-        dividend[i] = (dMat[i]*divisor[i]) - dividend[i];
+        dividend[i] = ((long long)dMat[i]*divisor[i]) - dividend[i];
         divisor[i]  *=   *(coefficientMatrix + i*column + i);
 
 
@@ -63,9 +60,6 @@ void writeValue_in_file_GaussianElimination(string solutionFileName, int *coeffi
         else {
             divisor[i] = 1;
         }
-        if(i==3)
-            cout << "dividend[" << i << "] = " << dividend[i] << "  divisor[" << i << "] = " << divisor[i] << endl;
-        cout << endl << "i = " << i << endl;
     }
 
 

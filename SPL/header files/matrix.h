@@ -20,6 +20,8 @@ int * matrix_inverse(int *matrix, int row, int column);
 
 
 int lcm(int x, int y);
+long long lcm(long long x, long long y);
 int gcd(int x, int y);
+long long gcd(long long x, long long y);
 char * getNumber(char *p, char sign, int *matrix);
 bool is_fractional_matrix(int *matrix);

@@ -57,6 +57,7 @@
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/max_length_of_number.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
+		<Unit filename="linear system solver/usingGaussJordanMethod.cpp" />
 		<Unit filename="linear system solver/usingGaussianElimination.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
 		<Unit filename="main.cpp" />
