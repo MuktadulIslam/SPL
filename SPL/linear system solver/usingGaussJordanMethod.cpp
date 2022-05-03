@@ -39,7 +39,7 @@ void makeUpperTriangleMatrix(string solutionFileName, int *coefficientMatrix, in
                     *temp1 = (*temp1 * multiplier1) - (*temp2 * multiplier2);
                 }
                 *(dMat+j) = *(dMat+j)*multiplier1 - *(dMat+i)*multiplier2;
-                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << " - " << "r" << i+1 << "*" << multiplier1 << " ]";
+                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier1 << " - " << "r" << i+1 << "*" << multiplier2 << " ]";
             }
 
             else {
@@ -50,7 +50,7 @@ void makeUpperTriangleMatrix(string solutionFileName, int *coefficientMatrix, in
                     *temp1 = (*temp1 * multiplier1) + (*temp2 * multiplier2);
                 }
                 *(dMat+j) = *(dMat+j)*multiplier1 + *(dMat+i)*multiplier2;
-                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << " + " << "r" << i+1 << "*" << multiplier1 << " ]";
+                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier1 << " + " << "r" << i+1 << "*" << multiplier2 << " ]";
             }
 
             t1 = rowElementSmaller(coefficientMatrix, row, column, dMat, j);

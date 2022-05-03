@@ -54,15 +54,15 @@
 		<Unit filename="header files/linearSystem.h" />
 		<Unit filename="header files/matrix.h" />
 		<Unit filename="header files/normal_matrix.h" />
-		<Unit filename="linear system solver/Gauss_Seidel_Iteration.cpp" />
 		<Unit filename="linear system solver/commonMethodsForLinearSolver.cpp" />
 		<Unit filename="linear system solver/equationInput.cpp" />
 		<Unit filename="linear system solver/max_length_of_number.cpp" />
 		<Unit filename="linear system solver/usingCramer&apos;sRule.cpp" />
-		<Unit filename="linear system solver/usingGaussJacobiIteration.cpp" />
 		<Unit filename="linear system solver/usingGaussJordanMethod.cpp" />
 		<Unit filename="linear system solver/usingGaussianElimination.cpp" />
 		<Unit filename="linear system solver/usingInverseMatrix.cpp" />
+		<Unit filename="linear system solver/using_gauss_Seidel_Iteration.cpp" />
+		<Unit filename="linear system solver/using_gauss_jacobi_iteration.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix/addition&amp;subtraction.cpp" />
 		<Unit filename="matrix/determinant.cpp" />

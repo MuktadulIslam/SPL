@@ -76,7 +76,7 @@ void makeLowerTriangleMatrix(string solutionFileName, int *coefficientMatrix, in
                     *temp2 = (*temp2 * multiplier2) - (*temp1 * multiplier1);
                 }
                 *(dMat+j) = *(dMat+j)*multiplier2 - *(dMat+i)*multiplier1;
-                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << "  " << "r" << i+1 << "*" << multiplier1 << " ]";
+                write << endl << "[r" << j+1 << "' = " << "r" << j+1 << "*" << multiplier2 << " - " << "r" << i+1 << "*" << multiplier1 << " ]";
             }
 
             else {

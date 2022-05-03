@@ -56,7 +56,7 @@
 	<bits/stdc++.h>
 	"header.h"
 
-1651486605 source:c:\users\user\onedrive\documents\github\spl\main.cpp
+1651576568 source:c:\users\user\onedrive\documents\github\spl\main.cpp
 	<bits/stdc++.h>
 	"matrix.h"
 	"linearSystem.h"
@@ -496,7 +496,7 @@
 1651487090 c:\users\user\onedrive\documents\github\spl\header files\matrix.h
 	<bits/stdc++.h>
 
-1650134136 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
+1651574867 c:\users\user\onedrive\documents\github\spl\header files\normal_matrix.h
 	<bits/stdc++.h>
 
 1651486586 c:\users\user\onedrive\documents\github\spl\header files\linearsystem.h
@@ -611,12 +611,12 @@
 	<bits/stdc++.h>
 	"cryptography.h"
 
-1651472734 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinggaussjordanmethod.cpp
+1651575777 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinggaussjordanmethod.cpp
 	<bits/stdc++.h>
 	"linearSystem.h"
 	"matrix.h"
 
-1651472657 source:c:\users\user\onedrive\documents\github\spl\linear system solver\commonmethodsforlinearsolver.cpp
+1651575211 source:c:\users\user\onedrive\documents\github\spl\linear system solver\commonmethodsforlinearsolver.cpp
 	<bits/stdc++.h>
 	"linearSystem.h"
 	"matrix.h"
@@ -624,4 +624,17 @@
 1651486371 source:c:\users\user\onedrive\documents\github\spl\linear system solver\usinggaussjacobiiteration.cpp
 	<bits/stdc++.h>
 	"linearSystem.h"
+
+1651486840 source:c:\users\user\onedrive\documents\github\spl\linear system solver\using_gauss_jacobi_iteration.cpp
+	<bits/stdc++.h>
+	"linearSystem.h"
+
+1651486809 source:c:\users\user\onedrive\documents\github\spl\linear system solver\using_gauss_seidel_iteration.cpp
+	<bits/stdc++.h>
+	"linearSystem.h"
+
+1651575733 source:c:\users\user\onedrive\documents\github\spl\normalmatrix\test.cpp
+	<bits/stdc++.h>
+	"matrix.h"
+	"normal_matrix.h"
 

@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include "normal_matrix.h"
+#include "matrix.h"
 using namespace std;
 
 void sub_normal_matrix(int *matrix, int *newMatrix, int row, int removeRow, int removeColumn) {
@@ -35,12 +36,45 @@ int normal_matrix_determinant(int *matrix, int row, int column) {
     }
 
     else {
-        int i, j, sum = 0, sign = 1, temp[row-1][row-1];
-        for(i=0 ; i<column ; i++) {
-            sub_normal_matrix (matrix, &temp[0][0], row, 0, i);
-            sum = sum + (*(matrix+i)) * normal_matrix_determinant(&temp[0][0], row-1, column-1) * sign;
-            sign = -sign;
+        int i, j, k, multiplier1, multiplier2, GCD, divisor = 1;
+        int *temp1, *temp2;
+
+        // making lower triangle matrix
+        for(i=0 ; i<row-1 ; i++) {
+            for(j=i+1 ; j<row ; j++) {
+                temp1 = (matrix + i*column + i);
+                temp2 = (matrix + j*column + i);
+
+                GCD = gcd(*temp1 , *temp2);
+                multiplier1 = abs(*temp2 / GCD);
+                multiplier2 = abs(*temp1 / GCD);
+                divisor *= multiplier2;
+
+                if((*temp1) * (*temp2) > 0) {    // if both are in same sign
+                    for(k=0 ; k<column ; k++){
+                        temp1 = matrix + i*column + k;
+                        temp2 = matrix + j*column + k;
+
+                        *temp2 = (*temp2 * multiplier2) - (*temp1 * multiplier1);
+                    }
+                }
+
+                else {
+                    for(k=0 ; k<column ; k++){
+                        temp1 = matrix + i*column + k;
+                        temp2 = matrix + j*column + k;
+
+                        *temp2 = (*temp2 * multiplier2) + (*temp1 * multiplier1);
+                    }
+                }
+            }
         }
-        return sum;
+
+        int multiplication = 1;
+        for(i=0 ; i<row; i++) {
+            multiplication *= *(matrix + i*column + i);
+        }
+
+        return multiplication/divisor;
     }
 }

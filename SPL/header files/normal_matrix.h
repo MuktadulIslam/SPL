@@ -17,6 +17,7 @@ int * normal_matrix_transpose(int *matrix, int row, int column);
 
 int * normal_matrix_adjoint(int *matrix, int row, int column);
 int * normal_matrix_inverse(int *matrix, int row, int column);
+int xxx(void) ;
 
 
 
