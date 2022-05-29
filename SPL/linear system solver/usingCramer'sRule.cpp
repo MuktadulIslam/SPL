@@ -119,7 +119,6 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
         = 69/-7
         = -69/7
     */
-
         write << endl << "So now we can get the value using this method...x = (DEL.x)/DEL" << endl << endl;
 
         int GCD;
@@ -145,6 +144,7 @@ void solution_by_cramersRules(char *equationFileName, char *solutionFileName) {
                         write << "\t\t    = " << del_x[k]/GCD << '/' << del/GCD << endl;
                 }
             }
+            write << endl;
 
         }
 

@@ -38,12 +38,19 @@ int normal_matrix_determinant(int *matrix, int row, int column) {
     else {
         int i, j, k, multiplier1, multiplier2, GCD, divisor = 1;
         int *temp1, *temp2;
+        int mat[row][column];
 
-        // making lower triangle matrix
+        // copy from matrix to mat, because it's going to be a upper triangler matrix
+        for(i=0 ; i<row ; i++)
+            for(j=0 ; j<column ; j++)
+                mat[i][j] = *(matrix + i*column + j);
+
+
+        // making upper triangler matrix
         for(i=0 ; i<row-1 ; i++) {
             for(j=i+1 ; j<row ; j++) {
-                temp1 = (matrix + i*column + i);
-                temp2 = (matrix + j*column + i);
+                temp1 = &mat[i][i];
+                temp2 = &mat[j][i];
 
                 GCD = gcd(*temp1 , *temp2);
                 multiplier1 = abs(*temp2 / GCD);
@@ -52,8 +59,8 @@ int normal_matrix_determinant(int *matrix, int row, int column) {
 
                 if((*temp1) * (*temp2) > 0) {    // if both are in same sign
                     for(k=0 ; k<column ; k++){
-                        temp1 = matrix + i*column + k;
-                        temp2 = matrix + j*column + k;
+                        temp1 = &mat[i][k];
+                        temp2 = &mat[j][k];
 
                         *temp2 = (*temp2 * multiplier2) - (*temp1 * multiplier1);
                     }
@@ -61,8 +68,8 @@ int normal_matrix_determinant(int *matrix, int row, int column) {
 
                 else {
                     for(k=0 ; k<column ; k++){
-                        temp1 = matrix + i*column + k;
-                        temp2 = matrix + j*column + k;
+                        temp1 = &mat[i][k];
+                        temp2 = &mat[j][k];
 
                         *temp2 = (*temp2 * multiplier2) + (*temp1 * multiplier1);
                     }
@@ -72,7 +79,7 @@ int normal_matrix_determinant(int *matrix, int row, int column) {
 
         int multiplication = 1;
         for(i=0 ; i<row; i++) {
-            multiplication *= *(matrix + i*column + i);
+            multiplication *= mat[i][i];
         }
 
         return multiplication/divisor;

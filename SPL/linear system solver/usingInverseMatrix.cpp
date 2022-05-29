@@ -158,13 +158,15 @@ void write_3rd_part_in_SolutionByInvers(string solutionFileName, int *coefficien
                 write << "\t   " << variables[i] << " = " << *(matrix+i*2) << endl;
             else
                 write << "\t   " << variables[i] << " = " << *(matrix+i*2) << "/" << *(matrix+i*2+1) << endl;
+
+            write << endl;
         }
 
     }
 
     else {
         for(i=0 ; i<row ; i++)
-            write << "\t   " << variables[i] << " = " << *(matrix+i) << endl;
+            write << "\t   " << variables[i] << " = " << *(matrix+i) << endl << endl;
     }
 
 
