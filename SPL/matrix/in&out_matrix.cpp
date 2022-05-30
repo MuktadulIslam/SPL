@@ -9,10 +9,16 @@ int * input_matrix_from_file(char *fileName, int *row, int *column) {
     char str[200], *p, sign;
     bool gotDivident, gotdivisor, gotSlash;
 
-    freopen(fileName, "r" , stdin);
-    cin >> *row >> *column;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
+// Opening files
+    ifstream read ;
+    read.open(fileName);
+    if(!read.is_open()) {
+        cout << "Failed to open " << fileName << " file!!!!!";
+        exit(1);
+    }
 
+    read >> *row >> *column;
+    read.get();
     matrix = (int*) malloc(((*row) * (*column)  * 2 + 1)*sizeof(int));
     temp = matrix;
     *matrix++ = INT_MAX;
@@ -25,7 +31,7 @@ int * input_matrix_from_file(char *fileName, int *row, int *column) {
         Count = 0;
         sign = '+';
 
-        cin.getline(str,200);
+        read.getline(str, 190);
 
         for(p = str ; *p ; p++) {
             if(*p == ' ') continue;
@@ -70,9 +76,9 @@ int * input_matrix_from_file(char *fileName, int *row, int *column) {
         if(Count < *row * 2) *matrix++ = 1;
     }
 
+    read.close();
     return matrix_memory_optimization(temp, *row, *column);
 }
-
 
 
 

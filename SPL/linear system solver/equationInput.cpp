@@ -17,11 +17,18 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
     int i, j, k, l, *matrix, *dMat, coefficient;
     bool gotVariable, gotCoefficient, gotEqualSign, flag;
 
-    freopen(fileName, "r" , stdin);
-    cin >> *row;
-    *column = *row;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');        // for clear input buffer
+    // Opening files
+    ifstream read ;
+    read.open(fileName);
+    if(!read.is_open()) {
+        cout << "Failed to open " << fileName << " file!!!!!";
+        exit(1);
+    }
 
+
+    read >> *row;
+    *column = *row;
+    read.get();
 
 
     // Initializing memory for 3 types of matrix
@@ -51,7 +58,7 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
         sign = '+';
         coefficient = 0;
 
-        cin.getline(str,200);
+        read.getline(str,200);
 
         for(p=str ; *p ; p++) {
             if(*p == ' ') continue;
@@ -107,4 +114,3 @@ void input_equation_from_file(char *fileName, int *row, int *column, int **coeff
         }
     }
 }
-

@@ -9,6 +9,9 @@ using namespace std;
 void matrixCalculator(void);
 void linearSystemSolving(void);
 void encryptionDecryption(void);
+void stringToArray(string str);
+
+char fileName[200];
 
 int main(void) {
     int choice;
@@ -23,6 +26,7 @@ int main(void) {
         cout << "Enter your choice = ";
         cin >> choice;
 
+
         if(choice == 1)
             matrixCalculator();
         else if(choice == 2)
@@ -32,25 +36,8 @@ int main(void) {
         else if(choice == 4)
             break;
         else
-            cout << "Enter Valid Choice";
+            cout << "\nEnter Valid Choice";
     }
-
-//    int i,j,k = 0,row, column, *matrix1, det[2], *matrix2, *matrix3, *matrix4;
-//    matrix1 = input_matrix_from_file("text2.txt", &row, &column);
-//    cout << matrix_determinant(matrix1, row, column);
-
-//    gauss_jacobi_iteration_method("equation3.txt");
-//    gauss_seidel_iteration_method("equation3.txt");
-//
-//    solution_by_GaussJordanMethod("equation2.txt", "solution3.txt");
-//    solution_by_GaussianElimination("equation2.txt", "solution4.txt");
-//    solution_by_inverseMatrix("equation2.txt", "solution2.txt");
-//    solution_by_cramersRules("equation2.txt", "solution1.txt");
-
-
-//    encryption("plaintext.txt", "encryptedText.bin");
-//    decryption("encryptedText.bin", "decryptedText.txt");
-
 }
 
 
@@ -59,7 +46,7 @@ void matrixCalculator(void) {
     char file1[100], file2[100];
     int row1, row2, column1, column2, *matrix1, *matrix2, constant;
 
-    while (true) {
+    while(true) {
         cout << endl << endl;
         cout << "\t 1. Addition" << endl;
         cout << "\t 2. Subtraction" << endl;
@@ -97,7 +84,6 @@ void matrixCalculator(void) {
             }
             else {
                 cout << "Enter Valid Choice";
-                continue;
             }
 
 
@@ -106,7 +92,7 @@ void matrixCalculator(void) {
             else if(choice == 2)
                 print_matrix(matrix_subtraction(matrix1,row1, column1, matrix2, row2, column2), row1, column1);
             else
-                print_matrix(matrix_multiplication(matrix1,row1, column1, matrix2, row2, column2), row1, column1);
+                print_matrix(matrix_multiplication(matrix1,row1, column1, matrix2, row2, column2), row1, column2);
         }
 
         else if(choice == 4 || choice == 5 || choice == 6 || choice == 7 || choice == 8) {
@@ -116,6 +102,7 @@ void matrixCalculator(void) {
             cin >> choice2;
 
             if(choice2 == 1) {
+                string s;
                 cin.ignore(numeric_limits<streamsize>::max(),'\n');
                 cout << "Enter the file name = ";
                 cin >> file1;
@@ -126,7 +113,6 @@ void matrixCalculator(void) {
             }
             else {
                 cout << "Enter Valid Choice";
-                continue;
             }
 
 
@@ -152,7 +138,6 @@ void matrixCalculator(void) {
         }
         else if(choice == 9)
             break;
-
         else {
             cout << "Enter Valid Choice";
         }
@@ -164,11 +149,11 @@ void linearSystemSolving(void) {
     int choice;
     char file[100];
 
-    while (true) {
+    while(true) {
         cout << endl << endl;
         cin.ignore(numeric_limits<streamsize>::max(),'\n');
         cout << "Enter Equation file name = ";
-        cin >> file;
+        gets(file);
 
 
         cout << "\t 1. Gauss Jordan Method" << endl;
@@ -186,15 +171,15 @@ void linearSystemSolving(void) {
         if(choice == 1)
             solution_by_GaussJordanMethod(file, "solution3.txt");
         else if(choice == 2)
-            solution_by_GaussianElimination("equation2.txt", "solution4.txt");
+            solution_by_GaussianElimination(file, "solution4.txt");
         else if(choice == 3)
-            solution_by_inverseMatrix("equation2.txt", "solution2.txt");
+            solution_by_inverseMatrix(file, "solution2.txt");
         else if(choice == 4)
-            solution_by_cramersRules("equation2.txt", "solution1.txt");
+            solution_by_cramersRules(file, "solution1.txt");
         else if(choice == 5)
-            gauss_jacobi_iteration_method("equation3.txt");
+            gauss_jacobi_iteration_method(file);
         else if(choice == 6)
-            gauss_seidel_iteration_method("equation3.txt");
+            gauss_seidel_iteration_method(file);
         else if(choice == 7)
             break;
         else
@@ -207,9 +192,8 @@ void encryptionDecryption(void) {
     int choice;
     string file;
 
-    while (true) {
+    while(true) {
         cout << endl << endl;
-
         cout << "\t 1. Encryption" << endl;
         cout << "\t 2. Decryption" << endl;
         cout << "\t 3. Exit" << endl;
@@ -230,7 +214,7 @@ void encryptionDecryption(void) {
             cout << "Enter Encrypted Text file name = ";
             cin >> file;
 
-            decryption("encryptedText.bin", "decryptedText.txt");
+            decryption("encryptedText.bin", file);
         }
         else if(choice == 3)
             break;
@@ -238,8 +222,6 @@ void encryptionDecryption(void) {
             cout << "Enter Valid Choice";
     }
 }
-
-
 
 
 

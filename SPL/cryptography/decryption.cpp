@@ -21,7 +21,7 @@ void decryption(string encryptedFile, string decryptedFile) {
         }
 
 
-// this section for Encryption
+// this section for Decryption
     int i, j, row, column, *matrix1, *matrix2, *KEY;
     KEY = key(&row, &column);
     int mat[column][row];
